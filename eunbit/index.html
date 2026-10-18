@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>은빛일터 - 노인일자리, 시니어 일자리, 중장년 구인구직 앱</title>
+<meta name="description" content="어르신 일자리, 여기 다 모았어요. 노인일자리·시니어 일자리·중장년 구인 공고를 큰 글씨로 매시간 새로 보여드리고, 기초연금 등 노인 지원금과 가까운 시니어클럽까지 한 번에 찾아보세요.">
+<meta name="keywords" content="노인일자리, 시니어 일자리, 어르신 일자리, 중장년 구인구직, 60대 일자리, 경비 구인, 미화 구인, 노인 지원금, 기초연금, 시니어클럽, 노인복지관">
+<link rel="canonical" href="https://dhsthdwjd.github.io/eunbit/">
+<link rel="icon" href="img/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="은빛일터 - 노인일자리, 중장년 구인구직">
+<meta property="og:description" content="매시간 새로 올라오는 어르신 일자리를 큰 글씨로. 담당자에게 바로 전화하고 노인 지원금까지 확인하세요.">
+<meta property="og:image" content="https://dhsthdwjd.github.io/eunbit/img/shot1.png">
+<meta property="og:url" content="https://dhsthdwjd.github.io/eunbit/">
+<meta property="og:locale" content="ko_KR">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "은빛일터: 노인일자리, 중장년 구인구직",
+  "operatingSystem": "Android",
+  "applicationCategory": "BusinessApplication",
+  "description": "노인일자리·시니어 일자리·중장년 구인 공고를 큰 글씨로 매시간 새로 보여주고, 노인 지원금과 시니어클럽 정보를 함께 제공하는 앱",
+  "image": "https://dhsthdwjd.github.io/eunbit/img/icon.png",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.offsong.eunbitilteo",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+  "author": { "@type": "Organization", "name": "Project J Lab" }
+}
+</script>
+<style>
+:root{
+  --bg:#ffffff; --bg-soft:#f4f6fa; --text:#111418; --sub:#5b6270; --line:#e6e9ef;
+  --accent:#2550e6; --accent-soft:#eaf0ff; --danger:#e5332a;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1115; --bg-soft:#171a21; --text:#f2f4f7; --sub:#a3aab8; --line:#262a33;
+    --accent:#6f8dff; --accent-soft:#1a2240;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo",sans-serif;line-height:1.65;font-size:17px;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* header */
+header{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none}
+.brand img{width:32px;height:32px;border-radius:8px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;border-radius:12px;padding:12px 20px;font-size:15px}
+.btn.sm{padding:8px 14px;font-size:14px;border-radius:10px}
+
+/* hero */
+.hero{padding:72px 0 56px;text-align:center}
+.hero .icon{width:112px;height:112px;border-radius:26px;box-shadow:0 8px 28px rgba(37,80,230,.22)}
+.eyebrow{display:inline-block;color:var(--accent);font-weight:700;font-size:15px;margin:24px 0 10px}
+.hero h1{font-size:clamp(30px,5.4vw,48px);line-height:1.25;font-weight:800;letter-spacing:-.02em}
+.hero p{color:var(--sub);font-size:clamp(16px,2.2vw,19px);margin:16px auto 32px;max-width:560px}
+.hero p.notice{margin:14px auto 0;max-width:none;font-size:12px;color:var(--sub);opacity:.75}
+
+/* screenshots */
+.shots{background:var(--bg-soft);padding:56px 0}
+.shots .row{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 12px;max-width:1040px;margin:0 auto}
+.shots img{flex:0 0 auto;width:220px;height:auto;border-radius:18px;scroll-snap-align:center;box-shadow:0 4px 18px rgba(0,0,0,.08);background:#fff}
+
+/* features */
+section.features{padding:80px 0}
+.sec-title{text-align:center;margin-bottom:44px}
+.sec-title span{color:var(--accent);font-weight:700;font-size:15px}
+.sec-title h2{font-size:clamp(24px,4vw,34px);font-weight:800;letter-spacing:-.02em;margin-top:8px;line-height:1.3}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{border:1px solid var(--line);border-radius:18px;padding:26px 24px}
+.card h3{font-size:19px;font-weight:700;margin-bottom:10px}
+.card ul{list-style:none;color:var(--sub);font-size:16.5px}
+.card li{position:relative;padding-left:14px;margin:4px 0}
+.card li::before{content:"";position:absolute;left:0;top:.7em;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:28px}
+.chip{background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:14px;padding:6px 12px;border-radius:999px}
+
+/* for whom */
+.whom{background:var(--bg-soft);padding:72px 0}
+.whom ul{list-style:none;max-width:560px;margin:0 auto;display:grid;gap:10px}
+.whom li{background:var(--bg);border-radius:14px;padding:16px 20px;font-weight:600}
+.whom li::before{content:"✓";color:var(--accent);margin-right:10px;font-weight:800}
+
+/* cta */
+.cta{text-align:center;padding:80px 0}
+.cta h2{font-size:clamp(24px,4vw,34px);font-weight:800;margin-bottom:24px;line-height:1.3}
+
+footer{border-top:1px solid var(--line);padding:32px 0 48px;font-size:13px;color:var(--sub)}
+footer p{margin:4px 0}
+footer a{color:var(--sub)}
+
+@media (max-width:560px){
+  .hero{padding:48px 0 40px}
+  .shots img{width:180px}
+  section.features,.cta{padding:56px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/icon.png" alt="은빛일터 아이콘">은빛일터</a>
+    <a class="btn sm" href="https://play.google.com/store/apps/details?id=com.offsong.eunbitilteo">앱 설치</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <img class="icon" src="img/icon.png" alt="은빛일터 앱 아이콘">
+      <div><span class="eyebrow">노인일자리 · 시니어 일자리 · 매시간 업데이트</span></div>
+      <h1>은퇴 후에도<br>일할 곳은 있습니다</h1>
+      <p>경비, 미화, 사무보조, 돌봄처럼 바로 지원할 수 있는<br>우리 동네 어르신 일자리를 큰 글씨로 보여드려요.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.eunbitilteo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Zm11.3 11.3 2.6 2.6-11.7 6.7 9.1-9.3Zm0-2.2L5.8 1.6l11.7 6.7-2.6 2.6Zm3.9-1.6 2.8 1.6c.8.5.8 1.7 0 2.2l-2.8 1.6-2.8-2.7 2.8-2.7Z"/></svg>
+        Google Play에서 무료로 받기
+      </a>
+      <p class="notice">정부·공공기관 앱이 아니며, 공공데이터를 활용합니다.</p>
+    </div>
+  </section>
+
+  <section class="shots" aria-label="앱 화면">
+    <div class="row">
+      <img src="img/shot1.png" alt="어르신 일자리를 매시간 새로 모아 보여주는 공고 목록 화면" loading="lazy" width="720" height="1280">
+      <img src="img/shot2.png" alt="담당자 연락처를 확인하고 바로 전화하는 공고 상세 화면" loading="lazy" width="720" height="1280">
+      <img src="img/shot3.png" alt="버튼 하나로 글씨 크기를 고르는 큰 글씨 화면" loading="lazy" width="720" height="1280">
+      <img src="img/shot4.png" alt="기초연금부터 우리 동네 지원까지 노인 지원금 화면" loading="lazy" width="720" height="1280">
+      <img src="img/shot5.png" alt="원하는 지역의 새 일자리 알림 설정 화면" loading="lazy" width="720" height="1280">
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="wrap">
+      <div class="sec-title"><span>주요 기능</span><h2>일자리 찾기부터 지원금까지<br>은빛일터 하나로</h2></div>
+      <div class="grid">
+        <article class="card">
+          <h3>매시간 새로 고치는 구인 공고</h3>
+          <ul>
+            <li>한국노인인력개발원 구인정보를 매시간(오전 7시~밤 10시) 확인</li>
+            <li>마감된 공고는 빼고 지금 지원할 수 있는 공고만</li>
+            <li>지역·고용형태(정규직, 계약직, 시간제, 일용직)로 골라 보기</li>
+            <li>마감일과 D-day를 한눈에</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>담당자에게 바로 전화</h3>
+          <ul>
+            <li>기관명, 담당자, 모집인원, 연령, 우대사항 정리</li>
+            <li>[전화하기] 한 번이면 바로 연락</li>
+            <li>근무지를 지도로 확인하고 주소 복사</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>우리 동네 새 공고 알림</h3>
+          <ul>
+            <li>관심 지역을 고르면 새 공고가 올라올 때 알려드려요</li>
+            <li>마음에 드는 공고는 관심 목록에 저장</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>노인 지원금 한곳에서 확인</h3>
+          <ul>
+            <li>기초연금, 노인맞춤돌봄, 의료비 지원 등 1,400여 건</li>
+            <li>나라 지원과 우리 지역(시·군·구) 지원을 함께</li>
+            <li>현금·바우처·감면 등 형태별로 찾고 복지로 신청 방법 확인</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>가까운 시니어클럽·노인복지관</h3>
+          <ul>
+            <li>전국 노인일자리 수행기관 1,200여 곳</li>
+            <li>공고가 없어도 기관에 직접 문의하고 신청</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>보기 편한 큰 글씨</h3>
+          <ul>
+            <li>글자 크기를 보통, 크게, 아주 크게 중에서 선택</li>
+            <li>큼직한 버튼으로 어르신도 쉽게</li>
+          </ul>
+        </article>
+      </div>
+      <div class="chips" aria-label="주요 직종">
+        <span class="chip">경비</span><span class="chip">미화</span><span class="chip">사무보조</span>
+        <span class="chip">돌봄</span><span class="chip">시간제</span><span class="chip">일용직</span><span class="chip">노인일자리 사업</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="whom">
+    <div class="wrap">
+      <div class="sec-title"><span>추천 대상</span><h2>이런 분께 추천해요</h2></div>
+      <ul>
+        <li>소일거리나 단기 일자리를 찾는 60대 이상 어르신</li>
+        <li>부모님 일자리와 지원금을 대신 알아봐 드리는 자녀분</li>
+        <li>받을 수 있는 지원금이 궁금한 분</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2>우리 동네 새 일자리,<br>놓치지 마세요</h2>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.eunbitilteo">Google Play에서 무료로 받기</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>은빛일터는 정부·공공기관 앱이 아닙니다. 공개된 공공데이터를 보기 쉽게 정리해 보여드리며, 지원하기 전에 공고 담당자에게 내용을 꼭 확인하세요.</p>
+    <p>데이터 출처: 한국노인인력개발원(노인일자리 여기·워크넷 구인정보, 노인일자리 수행기관), 한국사회보장정보원(복지로 중앙부처·지자체 서비스), 공공데이터포털</p>
+    <p>개발: Project J Lab · 문의: <a href="mailto:dhsthdwjd1@gmail.com">dhsthdwjd1@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

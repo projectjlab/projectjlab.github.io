@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>콘크리트 계산기 - 레미콘 루베 계산, 배합·블록·철근·미장·타일 계산 앱</title>
+<meta name="description" content="도형만 고르면 레미콘 루베(m³)와 레미탈 포대 수가 바로 나와요. 슬래브·기초·기둥·계단 물량부터 배합비, 블록·벽돌, 철근 무게, 미장, 타일 수량까지 한 앱에서 계산하세요.">
+<meta name="keywords" content="콘크리트 계산기, 레미콘 계산, 루베 계산, 레미탈 포대, 콘크리트 배합비, 블록 수량 계산, 철근 무게 계산, 미장 계산, 타일 계산, 물량 산출">
+<link rel="canonical" href="https://dhsthdwjd.github.io/concrete/">
+<link rel="alternate" hreflang="ko" href="https://dhsthdwjd.github.io/concrete/">
+<link rel="alternate" hreflang="en" href="https://dhsthdwjd.github.io/concrete/en/">
+<link rel="alternate" hreflang="x-default" href="https://dhsthdwjd.github.io/concrete/en/">
+<link rel="icon" href="img/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="콘크리트 계산기 - 도형만 고르면 물량 끝">
+<meta property="og:description" content="도형만 고르면 레미콘 루베·시멘트 포대 수 계산 끝! 배합·블록·철근·미장·타일까지 한 번에.">
+<meta property="og:image" content="https://dhsthdwjd.github.io/concrete/img/hero.png">
+<meta property="og:url" content="https://dhsthdwjd.github.io/concrete/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"콘크리트 계산기-레미콘 루베·배합·블록·철근·미장·타일","operatingSystem":"Android","applicationCategory":"UtilitiesApplication","inLanguage":"ko","description":"도형만 고르면 레미콘 루베·시멘트 포대 수 계산 끝! 배합·블록·철근·미장·타일까지 한 번에.","image":"https://dhsthdwjd.github.io/concrete/img/icon.png","installUrl":"https://play.google.com/store/apps/details?id=com.offsong.concrete_calculator&hl=ko","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"author":{"@type":"Organization","name":"Project J Lab"}}
+</script>
+<style>
+:root{--bg:#ffffff;--soft:#f3f6fb;--text:#111827;--sub:#5b6577;--line:#e3e8f0;--blue:#1f4fe0;--blue-soft:#e6edff;--grid:#b4d8fb;--navy:#16203a}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0e131d;--soft:#161d2a;--text:#eef2f8;--sub:#9aa5b8;--line:#263045;--blue:#6f93ff;--blue-soft:#1b2747}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo",sans-serif;line-height:1.6;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.top{background-color:var(--grid);background-image:linear-gradient(rgba(255,255,255,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.35) 1px,transparent 1px);background-size:24px 24px;color:#111827}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:8px;font-weight:800;text-decoration:none}
+.brand img{width:32px;height:32px;border-radius:8px}
+.nav{display:flex;align-items:center;gap:14px;font-size:14px}
+.nav .lang{text-decoration:none;opacity:.7}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;border-radius:12px;padding:14px 24px;font-size:15px}
+.btn.sm{padding:8px 16px;font-size:14px;border-radius:10px}
+.top .btn{background:#1f4fe0}
+.hero{display:grid;grid-template-columns:1fr 1.25fr;gap:32px;align-items:center;padding:32px 20px 56px}
+.label{display:inline-block;background:#1f4fe0;color:#fff;font-weight:800;font-size:clamp(24px,3.6vw,34px);padding:6px 16px;margin-bottom:18px}
+.hero h1{font-size:clamp(26px,4vw,38px);font-weight:700;line-height:1.3;letter-spacing:-.02em}
+.hero p{font-size:17px;margin:14px 0 26px;color:#2b3446}
+.hero .art{width:100%;height:auto}
+.hero p.notice{font-size:12px;margin:12px 0 0;opacity:.75}
+.feat{padding:72px 0}
+.feat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feat-item{text-align:center}
+.feat-item .kicker{color:var(--blue);font-weight:700;font-size:14px}
+.feat-item h2{font-size:19px;font-weight:800;line-height:1.4;margin:4px 0 18px}
+.feat-item img{width:100%;max-width:280px;height:auto;border-radius:20px;box-shadow:0 6px 24px rgba(0,0,0,.07)}
+.sec{padding:72px 0;background:var(--soft)}
+.sec-title{text-align:center;font-size:clamp(26px,4vw,34px);font-weight:900;letter-spacing:-.02em;line-height:1.3;margin-bottom:40px}
+.sec-title em{font-style:normal;color:var(--blue)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card h3{font-size:17px;font-weight:800;margin-bottom:8px;color:var(--blue)}
+.card ul{list-style:none;color:var(--sub);font-size:14.5px}
+.card li{padding-left:12px;position:relative;margin:3px 0}
+.card li::before{content:"";position:absolute;left:0;top:.7em;width:4px;height:4px;background:var(--blue)}
+.whom{padding:72px 0}
+.whom ul{list-style:none;max-width:640px;margin:0 auto;display:grid;gap:10px}
+.whom li{background:var(--soft);border-left:4px solid var(--blue);border-radius:8px;padding:14px 18px;font-weight:600}
+.cta{background:var(--navy);color:#fff;text-align:center;padding:72px 20px}
+.cta h2{font-size:clamp(26px,4.5vw,38px);font-weight:900;letter-spacing:-.02em;line-height:1.3;margin-bottom:26px}
+footer{padding:28px 0 44px;font-size:12px;color:var(--sub)}
+footer p{margin:4px 0}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;text-align:center;padding:20px 16px 44px}
+  .feat-row{grid-template-columns:1fr;gap:48px}
+  .feat-item img{max-width:240px}
+  .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+<div class="top">
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/icon.png" alt="">콘크리트 계산기</a>
+    <nav class="nav"><a class="lang" href="en/" hreflang="en">English</a><a class="btn sm" href="https://play.google.com/store/apps/details?id=com.offsong.concrete_calculator&hl=ko">설치</a></nav>
+  </div>
+</header>
+  <section class="wrap hero">
+    <div>
+      <div class="label">콘크리트 계산기</div>
+      <h1>도형만 고르면<br>콘크리트 물량 끝</h1>
+      <p>슬래브, 기초, 기둥, 계단의 레미콘 루베와 레미탈 포대 수부터<br>배합·블록·철근·미장·타일까지 현장 계산을 한 앱에서.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.concrete_calculator&hl=ko"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Zm11.3 11.3 2.6 2.6-11.7 6.7 9.1-9.3Zm0-2.2L5.8 1.6l11.7 6.7-2.6 2.6Zm3.9-1.6 2.8 1.6c.8.5.8 1.7 0 2.2l-2.8 1.6-2.8-2.7 2.8-2.7Z"/></svg> Google Play에서 무료로 받기</a>
+      <p class="notice">계산 결과는 추정치예요. 주문 전 현장 조건과 규격을 확인하세요.</p>
+    </div>
+    <img class="art" src="img/hero.png" alt="콘크리트 계산기 도형 선택과 기초 치수 입력 화면" width="1570" height="1199">
+  </section>
+</div>
+<main>
+  <section class="feat">
+    <div class="wrap feat-row">
+      <div class="feat-item"><div class="kicker">도면 그대로 입력</div><h2>m · cm · mm, 칸마다 단위 선택<br>그림 속 a · b · c 치수만 채우면 끝</h2><img src="img/f1.png" alt="기초 도형의 치수 가이드 그림과 단위 선택 화면" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><div class="kicker">배합까지 한 번에</div><h2>계산한 부피를 그대로 배합으로<br>시멘트 · 모래 · 자갈 · 물 자동 계산</h2><img src="img/f2.png" alt="배합비를 고르고 시멘트, 모래, 자갈 양을 계산하는 화면" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><div class="kicker">현장별 기록</div><h2>현장 이름 붙여 저장하고<br>언제든 다시 열고 바로 공유</h2><img src="img/f3.png" alt="현장 이름별로 저장된 계산 기록 화면" loading="lazy" width="720" height="1280"></div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="sec-title">현장에 필요한 <em>계산</em>을 한 앱에서</h2>
+      <div class="grid">
+        <article class="card"><h3>콘크리트 부피</h3><ul><li>슬래브·벽, 기초(테두리·2~4칸), 기둥(사각·원형·원통)</li><li>계단, 원뿔대, 사다리꼴(옹벽·측구)</li><li>손실 여유분 0~15% 반영</li><li>레미탈 20·25·40kg 포대 수, 루베당 단가로 비용</li></ul></article>
+        <article class="card"><h3>콘크리트 배합</h3><ul><li>1:1.5:3 고강도 · 1:2:4 일반 · 1:3:6 버림</li><li>시멘트·모래·자갈(kg, m³), 물(L)</li><li>시멘트 25·40kg 포대 수</li></ul></article>
+        <article class="card"><h3>블록 · 벽돌</h3><ul><li>시멘트 블록 390×190, 벽돌 190×57</li><li>줄눈 두께 반영, 문·창문 면적 제외</li><li>여유분과 개당 가격으로 비용</li></ul></article>
+        <article class="card"><h3>철근 무게</h3><ul><li>KS 규격 D10~D32</li><li>총 무게(kg·톤)와 총 길이</li><li>톤당 가격으로 비용</li></ul></article>
+        <article class="card"><h3>미장</h3><ul><li>벽 면적과 두께, 배합비 1:3~1:6</li><li>시멘트 포대 수와 모래 양</li></ul></article>
+        <article class="card"><h3>타일</h3><ul><li>치수 또는 총면적 입력</li><li>타일 크기·줄눈 폭 반영한 필요 장수</li><li>박스당 장수로 필요한 박스 수</li></ul></article>
+      </div>
+    </div>
+  </section>
+  <section class="whom">
+    <div class="wrap">
+      <h2 class="sec-title"><em>이런 분께</em> 추천해요</h2>
+      <ul>
+        <li>레미콘 주문 전 루베를 빠르게 확인해야 하는 현장소장·시공자</li>
+        <li>견적을 내야 하는 소규모 시공업체·인테리어 업체</li>
+        <li>바닥, 담장, 계단을 직접 시공하는 DIY 사용자</li>
+      </ul>
+    </div>
+  </section>
+  <section class="cta">
+    <h2>레미콘 주문 전,<br>루베부터 계산하세요</h2>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.concrete_calculator&hl=ko">Google Play에서 무료로 받기</a>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>계산 결과는 추정치입니다. 실제 주문 수량은 현장 조건, 제품 규격, 공급업체 기준을 확인한 뒤 결정하세요. 구조용 콘크리트는 배합설계를 따르세요.</p>
+    <p>Project J Lab · <a href="mailto:dhsthdwjd1@gmail.com">dhsthdwjd1@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>

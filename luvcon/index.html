@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>럽콘(Luvcon) - 커플 쿠폰 만들기, 소원권 쿠폰 메이커</title>
+<meta name="description" content="연인, 친구에게 세상 단 하나뿐인 쿠폰을 선물하세요. 귀여운 이모티콘을 고르고 내용만 입력하면 1분 만에 소원권, 커플 쿠폰 완성. 기념일, 사과할 때, 장거리 연애에도 딱!">
+<meta name="keywords" content="커플 쿠폰, 소원권 만들기, 쿠폰 만들기 앱, 기프티콘 만들기, 커플 앱, 기념일 선물, 연인 이벤트, 곰신">
+<link rel="canonical" href="https://dhsthdwjd.github.io/luvcon/">
+<link rel="alternate" hreflang="ko" href="https://dhsthdwjd.github.io/luvcon/">
+<link rel="alternate" hreflang="en" href="https://dhsthdwjd.github.io/luvcon/en/">
+<link rel="alternate" hreflang="x-default" href="https://dhsthdwjd.github.io/luvcon/en/">
+<link rel="icon" href="img/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="럽콘 - 세상 단 하나뿐인 쿠폰">
+<meta property="og:description" content="귀여운 이모티콘 고르고 내용만 입력하면 끝! 1분이면 완성되는 커플 쿠폰·소원권.">
+<meta property="og:image" content="https://dhsthdwjd.github.io/luvcon/img/hero.png">
+<meta property="og:url" content="https://dhsthdwjd.github.io/luvcon/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"럽콘(Luvcon)","operatingSystem":"Android","applicationCategory":"LifestyleApplication","inLanguage":"ko","description":"귀여운 이모티콘 고르고 내용만 입력하면 끝! 1분이면 완성되는 커플 쿠폰·소원권.","image":"https://dhsthdwjd.github.io/luvcon/img/icon.png","installUrl":"https://play.google.com/store/apps/details?id=org.techtown.luvcon&hl=ko","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"author":{"@type":"Organization","name":"Project J Lab"}}
+</script>
+<style>
+:root{--bg:#f7f6ee;--card:#ffffff;--text:#2b2b2b;--sub:#77756d;--line:#e8e5d8;--coral:#f25f5c;--coral-soft:#fde9e6}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1b1a17;--card:#25241f;--text:#f3f1e8;--sub:#aaa69a;--line:#36342d;--coral:#ff7a74;--coral-soft:#3a2523}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo",sans-serif;line-height:1.65;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;letter-spacing:.02em}
+.brand img{width:30px;height:30px}
+.nav{display:flex;align-items:center;gap:14px;font-size:14px}
+.nav .lang{color:var(--sub);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:13px 24px;font-size:15px}
+.btn.sm{padding:8px 16px;font-size:14px}
+.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:32px;align-items:center;padding:48px 20px 64px}
+.hero h1{font-size:clamp(32px,5vw,50px);font-weight:300;line-height:1.3;letter-spacing:-.02em}
+.hero h1 b{font-weight:800}
+.hero h1 small{font-size:14px;font-weight:500;color:var(--sub);letter-spacing:0;vertical-align:middle;margin-left:6px}
+.hero p{color:var(--sub);font-size:17px;margin:18px 0 28px}
+.art2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.art2 img{width:100%;height:auto;border-radius:22px;background:#fff;box-shadow:0 6px 24px rgba(0,0,0,.07)}
+.hero p.notice{font-size:12px;margin:12px 0 0;opacity:.8}
+.feat{padding:24px 0 72px}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feat-item{text-align:center}
+.feat-item h2{font-size:21px;font-weight:300;line-height:1.4;margin-bottom:16px}
+.feat-item h2 b{font-weight:800}
+.feat-item img{width:100%;height:auto;max-width:280px;border-radius:20px;background:#fff;box-shadow:0 6px 24px rgba(0,0,0,.06)}
+.sec{padding:72px 0;background:var(--card)}
+.sec.plain{background:transparent}
+.sec-title{text-align:center;font-size:clamp(24px,4vw,32px);font-weight:300;line-height:1.35;margin-bottom:40px}
+.sec-title b{font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--bg);border-radius:20px;padding:26px 24px}
+.sec.plain .card{background:var(--card)}
+.card h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.card h3::before{content:"\2665";color:var(--coral);margin-right:8px}
+.card p{color:var(--sub);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:32px}
+.chip{background:var(--coral-soft);color:var(--coral);font-weight:600;font-size:14px;padding:6px 14px;border-radius:999px}
+.cta{text-align:center;padding:80px 20px}
+.cta h2{font-size:clamp(24px,4vw,34px);font-weight:300;line-height:1.35;margin-bottom:26px}
+.cta h2 b{font-weight:800}
+footer{border-top:1px solid var(--line);padding:28px 0 44px;font-size:12px;color:var(--sub)}
+footer p{margin:4px 0}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;text-align:center;padding:28px 16px 48px}
+  .feat-grid{grid-template-columns:1fr;gap:44px}
+  .feat-item img{max-width:240px}
+  .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/icon.png" alt="">LUVCON</a>
+    <nav class="nav"><a class="lang" href="en/" hreflang="en">English</a><a class="btn sm" href="https://play.google.com/store/apps/details?id=org.techtown.luvcon&hl=ko">설치</a></nav>
+  </div>
+</header>
+<main>
+  <section class="wrap hero">
+    <div>
+      <h1><b>럽콘</b><small>Love + Gifticon</small><br>끼 한번<br><b>제대로</b> 부려보자!</h1>
+      <p>사랑하는 연인에게, 좋아하는 친구에게<br>소원권·부탁권·고마운 마음을 귀여운 쿠폰으로 전해 보세요.<br>이모티콘 고르고 내용만 입력하면 1분이면 끝!</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=org.techtown.luvcon&hl=ko"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Zm11.3 11.3 2.6 2.6-11.7 6.7 9.1-9.3Zm0-2.2L5.8 1.6l11.7 6.7-2.6 2.6Zm3.9-1.6 2.8 1.6c.8.5.8 1.7 0 2.2l-2.8 1.6-2.8-2.7 2.8-2.7Z"/></svg> Google Play에서 무료로 받기</a>
+      <p class="notice">실제 상품권 효력은 없는 재미용 쿠폰입니다.</p>
+    </div>
+    <div class="art2"><img src="img/hero1.png" alt="럽콘으로 만든 귀여운 커플 쿠폰들" width="720" height="1400"><img src="img/hero2.png" alt="" width="720" height="1400"></div>
+  </section>
+  <section class="feat">
+    <div class="wrap feat-grid">
+      <div class="feat-item"><h2><b>누구나</b> 정말 쉽게<br>사용할 수 있어요</h2><img src="img/s1.png" alt="이모티콘·사진·카메라·배경 메뉴가 있는 쿠폰 만들기 화면" loading="lazy" width="720" height="1400"></div>
+      <div class="feat-item"><h2><b>30여종</b>의 다양한<br>이모티콘을 제공합니다</h2><img src="img/s2.png" alt="30여 종의 귀여운 과일 이모티콘을 고르는 화면" loading="lazy" width="720" height="1400"></div>
+      <div class="feat-item"><h2><b>취향</b>에 맞춰서<br>원하는 배경을 골라보세요</h2><img src="img/s3.png" alt="쿠폰 배경 디자인을 고르는 화면" loading="lazy" width="720" height="1400"></div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="sec-title"><b>이럴 때</b> 럽콘을 써 보세요</h2>
+      <div class="grid">
+        <article class="card"><h3>특별한 기념일 선물</h3><p>백일, 결혼기념일, 생일에 기억에 남는 쿠폰을 선물하세요.</p></article>
+        <article class="card"><h3>애교 있게 사과할 때</h3><p>"다시는 안 그럴게 1회 이용권"으로 분위기를 풀어 보세요.</p></article>
+        <article class="card"><h3>더 재미있는 연애</h3><p>소원권, 데이트권으로 연인과 특별한 재미를 더해 보세요.</p></article>
+        <article class="card"><h3>표현하기 힘든 장거리 연애</h3><p>곰신, 기러기 커플도 쿠폰 하나로 마음을 전할 수 있어요.</p></article>
+      </div>
+      <div class="chips"><span class="chip">발렌타인데이</span><span class="chip">화이트데이</span><span class="chip">로즈데이</span><span class="chip">백일</span><span class="chip">생일</span><span class="chip">결혼기념일</span></div>
+    </div>
+  </section>
+  <section class="sec plain">
+    <div class="wrap">
+      <h2 class="sec-title"><b>내 마음대로</b> 꾸미는 쿠폰</h2>
+      <div class="grid">
+        <article class="card"><h3>상황별 이모티콘</h3><p>"나랑 사귤래?", "참외롭다"처럼 상황에 맞는 귀여운 이모티콘.</p></article>
+        <article class="card"><h3>내 사진으로 만들기</h3><p>앨범 사진이나 카메라로 찍은 사진을 쿠폰에 넣을 수 있어요.</p></article>
+        <article class="card"><h3>진짜 쿠폰처럼</h3><p>유효기간, 주문번호, 교환처를 직접 입력하고 바코드까지.</p></article>
+        <article class="card"><h3>이미지로 저장·공유</h3><p>완성한 쿠폰을 저장해서 메신저로 바로 보내세요.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="cta">
+    <h2>세상 단 하나뿐인 쿠폰,<br><b>지금 만들어 보세요</b></h2>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=org.techtown.luvcon&hl=ko">Google Play에서 무료로 받기</a>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>럽콘으로 만든 쿠폰은 실제 상품권·기프티콘과 같은 효력이 없으며, 재미와 마음 표현을 위한 이미지입니다.</p>
+    <p>Project J Lab · <a href="mailto:dhsthdwjd1@gmail.com">dhsthdwjd1@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>

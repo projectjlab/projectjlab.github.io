@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>철강 중량 계산기 - 철근·H빔·각파이프·철판 무게 계산 앱 | KS 규격표 단위중량</title>
+<meta name="description" content="철근, H빔, 각파이프, 철판 무게를 KS 규격표 단위중량 그대로 계산하세요. 무게→길이 역산, kg당 단가 견적, 자재 목록 합산까지. EN·AISC 규격과 스텐·알루미늄 등 19가지 재질 지원.">
+<meta name="keywords" content="철강 중량 계산기, 철근 무게 계산, H빔 무게, 각파이프 무게, 철판 무게 계산, 강관 중량, KS 규격 단위중량, 스텐 무게, 알루미늄 무게, 철골 물량">
+<link rel="canonical" href="https://dhsthdwjd.github.io/steel/">
+<link rel="alternate" hreflang="ko" href="https://dhsthdwjd.github.io/steel/">
+<link rel="alternate" hreflang="en" href="https://dhsthdwjd.github.io/steel/en/">
+<link rel="alternate" hreflang="x-default" href="https://dhsthdwjd.github.io/steel/en/">
+<link rel="icon" href="img/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="철강 중량 계산기 - KS 규격표 그대로 무게를 계산">
+<meta property="og:description" content="철근·H빔·각파이프·철판 무게를 KS 규격표 단위중량으로 바로 계산. 길이 역산, 단가 견적, 자재 목록까지.">
+<meta property="og:image" content="https://dhsthdwjd.github.io/steel/img/hero.png">
+<meta property="og:url" content="https://dhsthdwjd.github.io/steel/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"철강 중량 계산기 - 철근·H빔·철판 무게","operatingSystem":"Android","applicationCategory":"BusinessApplication","inLanguage":"ko","description":"철근·H빔·각파이프·철판 무게를 KS 규격표 단위중량으로 바로 계산. 길이 역산, 단가 견적, 자재 목록까지.","image":"https://dhsthdwjd.github.io/steel/img/icon.png","installUrl":"https://play.google.com/store/apps/details?id=com.offsong.metal_calculator&hl=ko","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"author":{"@type":"Organization","name":"Project J Lab"}}
+</script>
+<style>
+:root{--bg:#ffffff;--soft:#f3f6fb;--text:#111827;--sub:#5b6577;--line:#e3e8f0;--blue:#003fff;--blue-soft:#e6edff;--grid:#b4d8fb;--navy:#16203a}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0e131d;--soft:#161d2a;--text:#eef2f8;--sub:#9aa5b8;--line:#263045;--blue:#6f93ff;--blue-soft:#1b2747}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo",sans-serif;line-height:1.6;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.top{background-color:#003fff;background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px);background-size:28px 28px;color:#fff}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:8px;font-weight:800;text-decoration:none}
+.brand img{width:32px;height:32px;border-radius:8px}
+.nav{display:flex;align-items:center;gap:14px;font-size:14px}
+.nav .lang{text-decoration:none;opacity:.7}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;border-radius:12px;padding:14px 24px;font-size:15px}
+.btn.sm{padding:8px 16px;font-size:14px;border-radius:10px}
+.top .btn{background:#fff;color:#003fff}
+.hero{display:grid;grid-template-columns:1fr 1.25fr;gap:32px;align-items:center;padding:32px 20px 56px}
+.label{display:flex;align-items:center;gap:12px;font-weight:800;font-size:clamp(24px,3.6vw,34px);margin-bottom:14px}.label img{width:52px;height:52px;border-radius:12px}
+.hero h1{font-size:clamp(26px,4vw,38px);font-weight:700;line-height:1.3;letter-spacing:-.02em}
+.hero p{font-size:17px;margin:14px 0 26px;color:rgba(255,255,255,.85)}
+.hero .art{width:100%;height:auto}
+.hero p.notice{font-size:12px;margin:12px 0 0;opacity:.75}
+.feat{padding:72px 0}
+.feat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feat-item{text-align:center}
+.feat-item .kicker{color:var(--blue);font-weight:700;font-size:14px}
+.feat-item h2{font-size:19px;font-weight:800;line-height:1.4;margin:4px 0 18px}
+.feat-item img{width:100%;max-width:280px;height:auto;border-radius:20px;box-shadow:0 6px 24px rgba(0,0,0,.07)}
+.sec{padding:72px 0;background:var(--soft)}
+.sec-title{text-align:center;font-size:clamp(26px,4vw,34px);font-weight:900;letter-spacing:-.02em;line-height:1.3;margin-bottom:40px}
+.sec-title em{font-style:normal;color:var(--blue)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card h3{font-size:17px;font-weight:800;margin-bottom:8px;color:var(--blue)}
+.card ul{list-style:none;color:var(--sub);font-size:14.5px}
+.card li{padding-left:12px;position:relative;margin:3px 0}
+.card li::before{content:"";position:absolute;left:0;top:.7em;width:4px;height:4px;background:var(--blue)}
+.whom{padding:72px 0}
+.whom ul{list-style:none;max-width:640px;margin:0 auto;display:grid;gap:10px}
+.whom li{background:var(--soft);border-left:4px solid var(--blue);border-radius:8px;padding:14px 18px;font-weight:600}
+.cta{background:var(--navy);color:#fff;text-align:center;padding:72px 20px}
+.cta h2{font-size:clamp(26px,4.5vw,38px);font-weight:900;letter-spacing:-.02em;line-height:1.3;margin-bottom:26px}
+footer{padding:28px 0 44px;font-size:12px;color:var(--sub)}
+footer p{margin:4px 0}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;text-align:center;padding:20px 16px 44px}
+  .feat-row{grid-template-columns:1fr;gap:48px}
+  .feat-item img{max-width:240px}
+  .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+<div class="top">
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/icon.png" alt="">철강 중량 계산기</a>
+    <nav class="nav"><a class="lang" href="en/" hreflang="en">English</a><a class="btn sm" href="https://play.google.com/store/apps/details?id=com.offsong.metal_calculator&hl=ko">설치</a></nav>
+  </div>
+</header>
+  <section class="wrap hero">
+    <div>
+      <div class="label"><img src="img/icon.png" alt="">철강 중량 계산기</div>
+      <h1>KS 규격표 그대로<br>무게를 계산</h1>
+      <p>"H빔 200×200 6m 몇 kg이지?"<br>규격만 고르면 치수와 무게가 바로 나와요.<br>단가 견적과 자재 목록까지 한 앱에서.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.metal_calculator&hl=ko"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Zm11.3 11.3 2.6 2.6-11.7 6.7 9.1-9.3Zm0-2.2L5.8 1.6l11.7 6.7-2.6 2.6Zm3.9-1.6 2.8 1.6c.8.5.8 1.7 0 2.2l-2.8 1.6-2.8-2.7 2.8-2.7Z"/></svg> Google Play에서 무료로 받기</a>
+      <p class="notice">계산 결과는 참고용 추정치예요.</p>
+    </div>
+    <img class="art" src="img/hero.png" alt="철강 중량 계산기 원형 파이프 무게 계산 화면" width="1573" height="1198">
+  </section>
+</div>
+<main>
+  <section class="feat">
+    <div class="wrap feat-row">
+      <div class="feat-item"><div class="kicker">철근부터 H빔까지 13가지 형상</div><h2>철근 · H빔 · 각파이프 · 앵글 · 철판까지<br>원하는 형상을 골라 바로 무게를 계산</h2><img src="img/f1.png" alt="철근, 환봉, 각파이프, H형강 등 13가지 형상 선택 화면" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><div class="kicker">견적까지 한 번에 끝</div><h2>자재를 담아 두고 언제든 다시 확인<br>총 중량 · 총 금액 자동 계산</h2><img src="img/f2.png" alt="자재 목록에 담긴 파이프와 총 중량 화면" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><div class="kicker">KS · EN · AISC 규격 지원</div><h2>규격만 고르면 치수와 무게가 자동 입력<br>실제 규격표 기준으로 정확도 향상</h2><img src="img/f3.png" alt="원형 파이프 KS 규격 선택 화면" loading="lazy" width="720" height="1280"></div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="sec-title">현장에서 바로 쓰는 <em>철강 중량</em> 계산</h2>
+      <div class="grid">
+        <article class="card"><h3>KS 규격표 단위중량</h3><ul><li>철근 D10~D51 (KS D 3504)</li><li>H빔·채널·앵글 (KS D 3502)</li><li>각파이프·직사각 파이프 (KS D 3568)</li><li>구조용 강관 15A~150A (KS D 3507)</li></ul></article>
+        <article class="card"><h3>해외 규격까지</h3><ul><li>유럽 EN: IPE, HEA, HEB, HEM, UPN</li><li>미국 AISC: W형강, C형강, L형강, NPS 파이프</li><li>mm·kg ↔ inch·lb 버튼 하나로 전환</li></ul></article>
+        <article class="card"><h3>철판 무게</h3><ul><li>가로×세로×두께와 장 수로 입력</li><li>3×6, 4×8, 5×10 판 사이즈 선택</li><li>1장 무게, 총 무게, kg/m²</li></ul></article>
+        <article class="card"><h3>무게 → 길이 역산</h3><ul><li>"철근 1톤이면 몇 m?" 거꾸로 계산</li><li>남은 자재 확인, 절단 계획에 유용</li></ul></article>
+        <article class="card"><h3>단가 견적 · 자재 목록</h3><ul><li>kg당 단가로 총 금액 계산</li><li>목록에 담아 총 무게·금액 합산</li><li>문자·카톡으로 바로 공유</li></ul></article>
+        <article class="card"><h3>13가지 형상 · 19가지 재질</h3><ul><li>일반강, 스텐 304·316·430, 알루미늄 6061·5052·7075</li><li>구리, 황동, 청동, 주철, 티타늄</li><li>비중 입력으로 재질 직접 추가</li></ul></article>
+      </div>
+    </div>
+  </section>
+  <section class="whom">
+    <div class="wrap">
+      <h2 class="sec-title"><em>이런 분께</em> 필요해요</h2>
+      <ul>
+        <li>철골·철근 물량과 견적을 빠르게 뽑아야 하는 현장 기사, 공무 담당자</li>
+        <li>철판 무게와 견적을 바로 알려줘야 하는 철물점·철강 유통</li>
+        <li>각파이프, 앵글로 구조물을 만드는 용접·제작 업체</li>
+        <li>스텐, 알루미늄 판재 무게가 궁금한 DIY·인테리어 작업자</li>
+      </ul>
+    </div>
+  </section>
+  <section class="cta">
+    <h2>규격표 찾지 말고,<br>바로 계산하세요</h2>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.metal_calculator&hl=ko">Google Play에서 무료로 받기</a>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>계산 결과는 참고용 추정치입니다. 실제 제품 무게는 제조사와 공차에 따라 다를 수 있습니다.</p>
+    <p>Project J Lab · <a href="mailto:dhsthdwjd1@gmail.com">dhsthdwjd1@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>

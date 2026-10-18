@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concrete Calculator - Cubic Yards, Bags, Mix, Block, Rebar & Tile Estimator</title>
+<meta name="description" content="Pick a shape and get cubic yards and premix bags in seconds. Estimate slabs, footings, columns and steps, plus concrete mix, blocks and bricks, rebar weight, plaster and tile.">
+<meta name="keywords" content="concrete calculator, cubic yard calculator, concrete bag calculator, ready mix calculator, concrete mix ratio, block calculator, rebar weight calculator, tile calculator">
+<link rel="canonical" href="https://dhsthdwjd.github.io/concrete/en/">
+<link rel="alternate" hreflang="ko" href="https://dhsthdwjd.github.io/concrete/">
+<link rel="alternate" hreflang="en" href="https://dhsthdwjd.github.io/concrete/en/">
+<link rel="alternate" hreflang="x-default" href="https://dhsthdwjd.github.io/concrete/en/">
+<link rel="icon" href="../img/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Concrete Calculator - Pick a shape, get the volume">
+<meta property="og:description" content="Pick a shape, get cubic yards & bags. Plus mix, block, rebar, plaster & tile.">
+<meta property="og:image" content="https://dhsthdwjd.github.io/concrete/img/en/hero.png">
+<meta property="og:url" content="https://dhsthdwjd.github.io/concrete/en/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"Concrete Calculator: Bags, Mix","operatingSystem":"Android","applicationCategory":"UtilitiesApplication","inLanguage":"en","description":"Pick a shape, get cubic yards & bags. Plus mix, block, rebar, plaster & tile.","image":"https://dhsthdwjd.github.io/concrete/img/icon.png","installUrl":"https://play.google.com/store/apps/details?id=com.offsong.concrete_calculator&hl=en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Project J Lab"}}
+</script>
+<style>
+:root{--bg:#ffffff;--soft:#f3f6fb;--text:#111827;--sub:#5b6577;--line:#e3e8f0;--blue:#1f4fe0;--blue-soft:#e6edff;--grid:#b4d8fb;--navy:#16203a}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0e131d;--soft:#161d2a;--text:#eef2f8;--sub:#9aa5b8;--line:#263045;--blue:#6f93ff;--blue-soft:#1b2747}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo",sans-serif;line-height:1.6;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.top{background-color:var(--grid);background-image:linear-gradient(rgba(255,255,255,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.35) 1px,transparent 1px);background-size:24px 24px;color:#111827}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:8px;font-weight:800;text-decoration:none}
+.brand img{width:32px;height:32px;border-radius:8px}
+.nav{display:flex;align-items:center;gap:14px;font-size:14px}
+.nav .lang{text-decoration:none;opacity:.7}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;border-radius:12px;padding:14px 24px;font-size:15px}
+.btn.sm{padding:8px 16px;font-size:14px;border-radius:10px}
+.top .btn{background:#1f4fe0}
+.hero{display:grid;grid-template-columns:1fr 1.25fr;gap:32px;align-items:center;padding:32px 20px 56px}
+.label{display:inline-block;background:#1f4fe0;color:#fff;font-weight:800;font-size:clamp(24px,3.6vw,34px);padding:6px 16px;margin-bottom:18px}
+.hero h1{font-size:clamp(26px,4vw,38px);font-weight:700;line-height:1.3;letter-spacing:-.02em}
+.hero p{font-size:17px;margin:14px 0 26px;color:#2b3446}
+.hero .art{width:100%;height:auto}
+.hero p.notice{font-size:12px;margin:12px 0 0;opacity:.75}
+.feat{padding:72px 0}
+.feat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feat-item{text-align:center}
+.feat-item .kicker{color:var(--blue);font-weight:700;font-size:14px}
+.feat-item h2{font-size:19px;font-weight:800;line-height:1.4;margin:4px 0 18px}
+.feat-item img{width:100%;max-width:280px;height:auto;border-radius:20px;box-shadow:0 6px 24px rgba(0,0,0,.07)}
+.sec{padding:72px 0;background:var(--soft)}
+.sec-title{text-align:center;font-size:clamp(26px,4vw,34px);font-weight:900;letter-spacing:-.02em;line-height:1.3;margin-bottom:40px}
+.sec-title em{font-style:normal;color:var(--blue)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card h3{font-size:17px;font-weight:800;margin-bottom:8px;color:var(--blue)}
+.card ul{list-style:none;color:var(--sub);font-size:14.5px}
+.card li{padding-left:12px;position:relative;margin:3px 0}
+.card li::before{content:"";position:absolute;left:0;top:.7em;width:4px;height:4px;background:var(--blue)}
+.whom{padding:72px 0}
+.whom ul{list-style:none;max-width:640px;margin:0 auto;display:grid;gap:10px}
+.whom li{background:var(--soft);border-left:4px solid var(--blue);border-radius:8px;padding:14px 18px;font-weight:600}
+.cta{background:var(--navy);color:#fff;text-align:center;padding:72px 20px}
+.cta h2{font-size:clamp(26px,4.5vw,38px);font-weight:900;letter-spacing:-.02em;line-height:1.3;margin-bottom:26px}
+footer{padding:28px 0 44px;font-size:12px;color:var(--sub)}
+footer p{margin:4px 0}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;text-align:center;padding:20px 16px 44px}
+  .feat-row{grid-template-columns:1fr;gap:48px}
+  .feat-item img{max-width:240px}
+  .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+<div class="top">
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="../img/icon.png" alt="">Concrete Calculator</a>
+    <nav class="nav"><a class="lang" href="../" hreflang="ko">한국어</a><a class="btn sm" href="https://play.google.com/store/apps/details?id=com.offsong.concrete_calculator&hl=en">Install</a></nav>
+  </div>
+</header>
+  <section class="wrap hero">
+    <div>
+      <div class="label">Concrete Calculator</div>
+      <h1>Pick a shape.<br>Get the volume.</h1>
+      <p>Cubic yards and premix bags for slabs, footings, columns and steps &mdash;<br>plus mix, blocks, rebar, plaster and tile in one app.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.concrete_calculator&hl=en"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Zm11.3 11.3 2.6 2.6-11.7 6.7 9.1-9.3Zm0-2.2L5.8 1.6l11.7 6.7-2.6 2.6Zm3.9-1.6 2.8 1.6c.8.5.8 1.7 0 2.2l-2.8 1.6-2.8-2.7 2.8-2.7Z"/></svg> Get it on Google Play</a>
+      <p class="notice">Results are estimates. Check site conditions and specs before ordering.</p>
+    </div>
+    <img class="art" src="../img/en/hero.png" alt="Concrete Calculator shape picker and footing dimension screens" width="1570" height="1199">
+  </section>
+</div>
+<main>
+  <section class="feat">
+    <div class="wrap feat-row">
+      <div class="feat-item"><div class="kicker">Enter it as drawn</div><h2>mm, cm or m &mdash; per field<br>Just fill in a · b · c from the guide</h2><img src="../img/en/f1.png" alt="Footing dimension guide with per-field units" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><div class="kicker">Mix in one tap</div><h2>Send the volume straight to mix<br>Cement, sand, gravel &amp; water</h2><img src="../img/en/f2.png" alt="Mix ratio selection with cement, sand and gravel amounts" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><div class="kicker">Saved by job site</div><h2>Name it, save it,<br>reopen or share anytime</h2><img src="../img/en/f3.png" alt="Saved calculations by job name" loading="lazy" width="720" height="1280"></div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="sec-title">Every <em>estimate</em> you need on site</h2>
+      <div class="grid">
+        <article class="card"><h3>Concrete volume</h3><ul><li>Slab / wall, footing (ring, 2&ndash;4 cells), column (square, round, tube)</li><li>Steps, cone footing, trapezoid (retaining wall, ditch)</li><li>Waste allowance 0&ndash;15%</li><li>40 / 60 / 80 lb premix bags, cost per cubic yard</li></ul></article>
+        <article class="card"><h3>Concrete mix</h3><ul><li>1:1.5:3 strong · 1:2:4 general · 1:3:6 lean</li><li>Cement, sand, gravel (lb, ft³) and water (gal)</li><li>47 / 94 lb cement bags</li></ul></article>
+        <article class="card"><h3>Blocks &amp; bricks</h3><ul><li>Standard CMU 16 × 8 and brick sizes</li><li>Mortar joints, door and window openings</li><li>Units and cost with waste</li></ul></article>
+        <article class="card"><h3>Rebar weight</h3><ul><li>ASTM #3 to #10</li><li>Total weight and length</li><li>Cost by price per lb</li></ul></article>
+        <article class="card"><h3>Plaster</h3><ul><li>Wall area, thickness, mix 1:3 to 1:6</li><li>Cement bags and sand</li></ul></article>
+        <article class="card"><h3>Tiles</h3><ul><li>Room dimensions or total area</li><li>Tile count with grout gap</li><li>Boxes needed from tiles per box</li></ul></article>
+      </div>
+    </div>
+  </section>
+  <section class="whom">
+    <div class="wrap">
+      <h2 class="sec-title"><em>Built for</em></h2>
+      <ul>
+        <li>Contractors and foremen checking yardage before ordering ready-mix</li>
+        <li>Small builders and remodelers preparing estimates</li>
+        <li>DIYers pouring a patio, driveway, fence footing or steps</li>
+      </ul>
+    </div>
+  </section>
+  <section class="cta">
+    <h2>Before you order ready-mix,<br>check the yardage</h2>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.concrete_calculator&hl=en">Get it on Google Play</a>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Results are estimates. Check site conditions, product specs and your supplier before ordering. Use a designed mix for structural concrete.</p>
+    <p>Project J Lab · <a href="mailto:dhsthdwjd1@gmail.com">dhsthdwjd1@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>

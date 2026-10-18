@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>박수알람 - 박수로 휴대폰 찾기 앱 | 박수 세 번이면 폰이 울려요</title>
+<meta name="description" content="집 안 어딘가에 둔 휴대폰, 박수 세 번이면 찾을 수 있어요. 소리·진동·플래시로 알려주고 감도, 알람음, 사용 시간을 설정할 수 있는 휴대폰 찾기 앱.">
+<meta name="keywords" content="휴대폰 찾기, 폰 찾기 앱, 박수로 폰 찾기, 박수 알람, 핸드폰 찾기, 잃어버린 휴대폰, 휴대폰 위치">
+<link rel="canonical" href="https://dhsthdwjd.github.io/clap/">
+<link rel="alternate" hreflang="ko" href="https://dhsthdwjd.github.io/clap/">
+<link rel="alternate" hreflang="en" href="https://dhsthdwjd.github.io/clap/en/">
+<link rel="alternate" hreflang="x-default" href="https://dhsthdwjd.github.io/clap/en/">
+<link rel="icon" href="img/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="박수알람 - 박수 세 번으로 휴대폰 찾기">
+<meta property="og:description" content="박수 세 번으로 집 안의 휴대폰 찾기. 소리, 진동, 플래시와 감도, 알람음, 사용 시간을 설정하세요.">
+<meta property="og:image" content="https://dhsthdwjd.github.io/clap/img/hero.png">
+<meta property="og:url" content="https://dhsthdwjd.github.io/clap/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"박수알람 - 박수로 휴대폰 찾기","operatingSystem":"Android","applicationCategory":"UtilitiesApplication","inLanguage":"ko","description":"박수 세 번으로 집 안의 휴대폰 찾기. 소리, 진동, 플래시와 감도, 알람음, 사용 시간을 설정하세요.","image":"https://dhsthdwjd.github.io/clap/img/icon.png","installUrl":"https://play.google.com/store/apps/details?id=com.offsong.lost_myphone&hl=ko","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"author":{"@type":"Organization","name":"Project J Lab"}}
+</script>
+<style>
+:root{--bg:#ffffff;--soft:#f4f4f1;--text:#111111;--sub:#666660;--line:#e6e6e0;--lime:#ddfb1f;--ink:#111111}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#111111;--soft:#1c1c1a;--text:#f4f4f0;--sub:#a5a59c;--line:#2c2c28}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo",sans-serif;line-height:1.6;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.top{background:var(--lime);color:var(--ink)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:8px;font-weight:800;text-decoration:none}
+.brand img{width:32px;height:32px;border-radius:8px;background:#fff}
+.nav{display:flex;align-items:center;gap:14px;font-size:14px}
+.nav .lang{text-decoration:none;opacity:.7}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--lime);text-decoration:none;font-weight:800;border-radius:14px;padding:14px 24px;font-size:15px}
+.btn.sm{padding:8px 16px;font-size:14px;border-radius:10px}
+.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:32px;align-items:center;padding:32px 20px 56px}
+.hero h1{font-size:clamp(36px,6vw,58px);font-weight:900;line-height:1.15;letter-spacing:-.03em}
+.hero p{font-size:18px;font-weight:500;margin:16px 0 28px}
+.hero .art{width:100%;height:auto;border-radius:24px}
+.hero p.notice{font-size:12px;font-weight:400;margin:12px 0 0;opacity:.65}
+.feat{padding:72px 0}
+.feat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feat-item{text-align:center}
+.pill{display:inline-block;background:var(--ink);color:var(--lime);font-weight:800;font-size:13px;padding:5px 14px;border-radius:999px;margin-bottom:10px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pill{background:var(--lime);color:var(--ink)}}
+.feat-item h2{font-size:21px;font-weight:800;line-height:1.35;margin-bottom:18px}
+.feat-item img{width:100%;max-width:280px;height:auto;border-radius:20px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.sec{padding:72px 0;background:var(--soft)}
+.sec-title{text-align:center;font-size:clamp(26px,4vw,34px);font-weight:900;letter-spacing:-.02em;line-height:1.3;margin-bottom:40px}
+.sec-title mark{background:linear-gradient(transparent 55%,var(--lime) 55%);color:inherit}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--bg);border:1.5px solid var(--ink);border-radius:18px;padding:24px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .card{border-color:var(--line)}}
+.card h3{font-size:18px;font-weight:800;margin-bottom:8px}
+.card p{color:var(--sub);font-size:15px}
+.note{max-width:720px;margin:40px auto 0;font-size:13px;color:var(--sub);text-align:center}
+.cta{background:var(--lime);color:var(--ink);text-align:center;padding:72px 20px}
+.cta h2{font-size:clamp(28px,5vw,42px);font-weight:900;letter-spacing:-.02em;line-height:1.25;margin-bottom:26px}
+footer{padding:28px 0 44px;font-size:12px;color:var(--sub)}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;text-align:center;padding:20px 16px 44px}
+  .feat-row{grid-template-columns:1fr;gap:48px}
+  .feat-item img{max-width:240px}
+  .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+<div class="top">
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/icon.png" alt="">박수알람</a>
+    <nav class="nav"><a class="lang" href="en/" hreflang="en">English</a><a class="btn sm" href="https://play.google.com/store/apps/details?id=com.offsong.lost_myphone&hl=ko">설치</a></nav>
+  </div>
+</header>
+  <section class="wrap hero">
+    <div>
+      <h1>박수 세 번으로<br>휴대폰 찾기</h1>
+      <p>어디 뒀는지 기억 안 나는 휴대폰,<br>박수만 치면 소리·진동·플래시로 알려줘요.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.lost_myphone&hl=ko"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Zm11.3 11.3 2.6 2.6-11.7 6.7 9.1-9.3Zm0-2.2L5.8 1.6l11.7 6.7-2.6 2.6Zm3.9-1.6 2.8 1.6c.8.5.8 1.7 0 2.2l-2.8 1.6-2.8-2.7 2.8-2.7Z"/></svg> Google Play에서 무료로 받기</a>
+      <p class="notice">감지 모드를 켜 둔 가까운 휴대폰에서만 작동해요.</p>
+    </div>
+    <img class="art" src="img/hero.png" alt="박수알람 휴대폰 찾기 화면과 알람 끄기 화면" width="1570" height="1199">
+  </section>
+</div>
+<main>
+  <section class="feat">
+    <div class="wrap feat-row">
+      <div class="feat-item"><span class="pill">박수 세 번</span><h2>박수 세 번만 치면<br>어디서든 폰이 울려요.</h2><img src="img/f1.png" alt="박수 감지를 켜고 알림 방식을 고르는 화면" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><span class="pill">맞춤 알림</span><h2>감도 · 알람 소리 · 진동 세기<br>원하는 대로 바꿔요.</h2><img src="img/f2.png" alt="감지 감도, 알람 음량, 진동 세기를 조절하는 설정 화면" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><span class="pill">찾기 완료</span><h2>몇 초 만에 폰 찾기 완료.<br>찾고 나면 알아서 꺼져요!</h2><img src="img/f3.png" alt="휴대폰을 찾은 뒤 표시되는 완료 화면" loading="lazy" width="720" height="1280"></div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="sec-title"><mark>이렇게</mark> 설정할 수 있어요</h2>
+      <div class="grid">
+        <article class="card"><h3>소리 · 진동 · 플래시</h3><p>필요한 알림 방식을 하나만 고르거나 함께 사용할 수 있어요.</p></article>
+        <article class="card"><h3>익숙한 벨소리로</h3><p>휴대폰에 있는 벨소리와 알림음을 고를 수 있어요. 기본 벨소리 설정은 바뀌지 않아요.</p></article>
+        <article class="card"><h3>감도와 시간 조절</h3><p>주변 소음에 맞춰 감도를, 알람 지속 시간과 사용 시간대를 정할 수 있어요.</p></article>
+        <article class="card"><h3>알림 눌러 끄기</h3><p>알람이 울리면 표시되는 알림을 눌러 바로 끌 수 있어요.</p></article>
+      </div>
+      <p class="note">박수 소리는 휴대폰 안에서 실시간으로만 분석하며 녹음하거나 서버로 보내지 않아요. GPS 위치 추적이나 멀리 있는 휴대폰 찾기는 지원하지 않아요.</p>
+    </div>
+  </section>
+  <section class="cta">
+    <h2>소파 틈, 이불 속 휴대폰<br>이제 박수로 찾으세요</h2>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.lost_myphone&hl=ko">Google Play에서 무료로 받기</a>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Project J Lab · <a href="mailto:dhsthdwjd1@gmail.com">dhsthdwjd1@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>

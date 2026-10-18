@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOGAM - Mood Diary & Mood Tracker App | Emotion Journal with Calendar & Stats</title>
+<meta name="description" content="Record your daily mood with emotion emojis and photos. Look back on your feelings with a mood calendar and statistics, protect your diary with a password and back up to Google Drive.">
+<meta name="keywords" content="mood diary, mood tracker, emotion journal, diary app, journal app, private diary, photo diary, daily journal">
+<link rel="canonical" href="https://dhsthdwjd.github.io/moodiary/en/">
+<link rel="alternate" hreflang="ko" href="https://dhsthdwjd.github.io/moodiary/">
+<link rel="alternate" hreflang="en" href="https://dhsthdwjd.github.io/moodiary/en/">
+<link rel="alternate" hreflang="x-default" href="https://dhsthdwjd.github.io/moodiary/en/">
+<link rel="icon" href="../img/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SOGAM - Mood Diary & Tracker">
+<meta property="og:description" content="Track moods and photos with calendar, stats, lock, and Google Drive backup.">
+<meta property="og:image" content="https://dhsthdwjd.github.io/moodiary/img/en/hero.png">
+<meta property="og:url" content="https://dhsthdwjd.github.io/moodiary/en/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"SOGAM: Mood Diary & Tracker","operatingSystem":"Android","applicationCategory":"LifestyleApplication","inLanguage":"en","description":"Track moods and photos with calendar, stats, lock, and Google Drive backup.","image":"https://dhsthdwjd.github.io/moodiary/img/icon.png","installUrl":"https://play.google.com/store/apps/details?id=com.offsong.moodiary&hl=en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Project J Lab"}}
+</script>
+<style>
+:root{--bg:#f6f6f4;--card:#ffffff;--text:#2a2a2e;--sub:#7a7a82;--line:#e6e6e2;--accent:#6c5ce7;--accent-soft:#eeebff;
+  --m1:#f47c7c;--m2:#f7c85b;--m3:#9fd37f;--m4:#8fb8e8;--m5:#b9a3e3}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#16161c;--card:#202029;--text:#f1f1f5;--sub:#a3a3ad;--line:#2e2e38;--accent:#9d90ff;--accent-soft:#2a2645}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo",sans-serif;line-height:1.65;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:8px;font-weight:700;text-decoration:none}
+.brand img{width:30px;height:30px;border-radius:8px}
+.nav{display:flex;align-items:center;gap:14px;font-size:14px}
+.nav .lang{color:var(--sub);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;border-radius:14px;padding:13px 24px;font-size:15px}
+.btn.sm{padding:8px 16px;font-size:14px;border-radius:10px}
+.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:32px;align-items:center;padding:48px 20px 64px}
+.dots{display:flex;gap:6px;margin-bottom:20px}
+.dots i{width:14px;height:14px;border-radius:50%}
+.hero h1{font-size:clamp(32px,5vw,48px);font-weight:300;line-height:1.3;letter-spacing:-.02em}
+.hero h1 b{font-weight:800}
+.hero p{color:var(--sub);font-size:17px;margin:18px 0 28px}
+.hero .art{width:100%;height:auto;border-radius:24px}
+.feat{padding:16px 0 72px}
+.feat-row{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 16px;max-width:1240px;margin:0 auto}
+.feat-item{flex:0 0 220px;text-align:center;scroll-snap-align:center}
+.feat-item h2{font-size:17px;font-weight:300;line-height:1.45;margin-bottom:14px;min-height:50px}
+.feat-item h2 b{font-weight:800}
+.feat-item img{width:100%;height:auto;border-radius:18px;box-shadow:0 6px 24px rgba(0,0,0,.06)}
+.sec{padding:72px 0;background:var(--card)}
+.sec.plain{background:transparent}
+.sec-title{text-align:center;font-size:clamp(24px,4vw,32px);font-weight:300;line-height:1.35;margin-bottom:40px}
+.sec-title b{font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--bg);border-radius:20px;padding:24px}
+.sec.plain .card{background:var(--card)}
+.card .no{font-size:13px;font-weight:700;color:var(--accent)}
+.card h3{font-size:18px;font-weight:700;margin:2px 0 8px}
+.card p{color:var(--sub);font-size:15px}
+.whom ul{list-style:none;max-width:600px;margin:0 auto;display:grid;gap:10px}
+.whom li{background:var(--card);border-radius:14px;padding:15px 20px;font-weight:500}
+.whom li::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--m3);margin-right:12px}
+.whom li:nth-child(5n+2)::before{background:var(--m2)}.whom li:nth-child(5n+3)::before{background:var(--m4)}.whom li:nth-child(5n+4)::before{background:var(--m1)}.whom li:nth-child(5n)::before{background:var(--m5)}
+.cta{text-align:center;padding:80px 20px}
+.cta h2{font-size:clamp(24px,4vw,34px);font-weight:300;line-height:1.35;margin-bottom:26px}
+.cta h2 b{font-weight:800}
+footer{border-top:1px solid var(--line);padding:28px 0 44px;font-size:12px;color:var(--sub)}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;text-align:center;padding:28px 16px 48px}
+  .dots{justify-content:center}
+  .wrap{padding:0 16px}
+  .feat-item{flex-basis:200px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="../img/icon.png" alt="">SOGAM</a>
+    <nav class="nav"><a class="lang" href="../" hreflang="ko">한국어</a><a class="btn sm" href="https://play.google.com/store/apps/details?id=com.offsong.moodiary&hl=en">Install</a></nav>
+  </div>
+</header>
+<main>
+  <section class="wrap hero">
+    <div>
+      <div class="dots" aria-hidden="true"><i style="background:var(--m1)"></i><i style="background:var(--m2)"></i><i style="background:var(--m3)"></i><i style="background:var(--m4)"></i><i style="background:var(--m5)"></i></div>
+      <h1>A little diary for<br><b>your everyday feelings</b></h1>
+      <p>One emotion, one short sentence, or one photo<br>is all it takes to write today&rsquo;s diary.<br>Look back on your feelings with a calendar and stats.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.moodiary&hl=en"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Zm11.3 11.3 2.6 2.6-11.7 6.7 9.1-9.3Zm0-2.2L5.8 1.6l11.7 6.7-2.6 2.6Zm3.9-1.6 2.8 1.6c.8.5.8 1.7 0 2.2l-2.8 1.6-2.8-2.7 2.8-2.7Z"/></svg> Get it on Google Play</a>
+    </div>
+    <img class="art" src="../img/en/hero.png" alt="SOGAM mood entries and emotion emojis" width="1443" height="1714">
+  </section>
+  <section class="feat">
+    <div class="feat-row">
+    <div class="feat-item"><h2>Mood Tracker<br>Use with <b>calendar</b>!</h2><img src="../img/en/f1.png" alt="Mood calendar showing daily emotion emojis" loading="lazy" width="720" height="1280"></div>
+    <div class="feat-item"><h2>Choose your Mood<br>Express your <b>feelings</b>!</h2><img src="../img/en/f2.png" alt="Choosing an emotion emoji for today" loading="lazy" width="720" height="1280"></div>
+    <div class="feat-item"><h2>Mood <b>Charts</b><br>Track your Life!</h2><img src="../img/en/f3.png" alt="Emotion statistics and charts" loading="lazy" width="720" height="1280"></div>
+    <div class="feat-item"><h2><b>Password</b> Lock<br>Protect your privacy!</h2><img src="../img/en/f4.png" alt="Password lock screen" loading="lazy" width="720" height="1280"></div>
+    <div class="feat-item"><h2>Comfortable in the dark.<br><b>Dark mode</b> available!</h2><img src="../img/en/f5.png" alt="Light and dark mode side by side" loading="lazy" width="720" height="1280"></div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="sec-title"><b>Key</b> features</h2>
+      <div class="grid">
+        <article class="card"><div class="no">#01</div><h3>Emotion emojis</h3><p>Express feelings that are hard to put into words. On busy days, just pick your mood.</p></article>
+        <article class="card"><div class="no">#02</div><h3>Mood calendar</h3><p>See your daily moods at a glance and rediscover forgotten days.</p></article>
+        <article class="card"><div class="no">#03</div><h3>Mood statistics</h3><p>See which emotions you felt most and how your mood changed over time.</p></article>
+        <article class="card"><div class="no">#04</div><h3>Photo diary</h3><p>Keep people, food, trips and everyday moments with photos and text.</p></article>
+        <article class="card"><div class="no">#05</div><h3>Password lock</h3><p>Write freely without worrying about anyone else reading.</p></article>
+        <article class="card"><div class="no">#06</div><h3>Google Drive backup</h3><p>Switch phones or reinstall without losing a single entry.</p></article>
+        <article class="card"><div class="no">#07</div><h3>TXT export</h3><p>Export your entries as TXT files and keep them anywhere.</p></article>
+        <article class="card"><div class="no">#08</div><h3>Fonts & dark mode</h3><p>Choose your favorite font and System, Light or Dark mode.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="sec plain whom">
+    <div class="wrap">
+      <h2 class="sec-title"><b>Made for</b> you if you</h2>
+      <ul>
+        <li>Want to record your daily mood in seconds</li>
+        <li>Are starting a mood diary for the first time</li>
+        <li>Prefer short, one-line entries</li>
+        <li>Want to keep photos and words together</li>
+        <li>Need a private diary with password protection</li>
+      </ul>
+    </div>
+  </section>
+  <section class="cta">
+    <h2>How was your day today?<br><b>Start your mood diary</b></h2>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.moodiary&hl=en">Get it on Google Play</a>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Project J Lab · <a href="mailto:dhsthdwjd1@gmail.com">dhsthdwjd1@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>
