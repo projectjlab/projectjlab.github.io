@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111d32">
+<title>Yunseul - One Question a Day Journal | Self-Discovery Diary App</title>
+<meta name="description" content="A calm, one-question-a-day journal. Every answer turns on a light in a quiet night scene, and your own night slowly begins to glow. Perfect if you want to journal but don&rsquo;t know what to write.">
+<meta name="keywords" content="question journal, one question a day, daily journal app, self discovery journal, journaling prompts, guided journal, diary app">
+<link rel="canonical" href="https://projectjlab.github.io/yunseul/en/">
+<link rel="alternate" hreflang="ko" href="https://projectjlab.github.io/yunseul/">
+<link rel="alternate" hreflang="en" href="https://projectjlab.github.io/yunseul/en/">
+<link rel="alternate" hreflang="x-default" href="https://projectjlab.github.io/yunseul/en/">
+<link rel="icon" href="../img/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yunseul - Self-Discovery Diary">
+<meta property="og:description" content="Answer one question a day. Each answer lights up a window in your night village.">
+<meta property="og:image" content="https://projectjlab.github.io/yunseul/img/en/hero2.png">
+<meta property="og:url" content="https://projectjlab.github.io/yunseul/en/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"Yunseul: Self-Discovery Diary","operatingSystem":"Android","applicationCategory":"LifestyleApplication","inLanguage":"en","description":"Answer one question a day. Each answer lights up a window in your night village.","image":"https://projectjlab.github.io/yunseul/img/icon.png","installUrl":"https://play.google.com/store/apps/details?id=com.offsong.yunseul_diary&hl=en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Project J Lab"}}
+</script>
+<style>
+:root{--bg:#111d32;--bg2:#0c1626;--card:#18263f;--text:#eef1f7;--sub:#a9b3c6;--line:#24344f;--moon:#f6dfa0;--coral:#ff6b6b;--mint:#3fd39a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:"Gowun Dodum",Pretendard,-apple-system,sans-serif;line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.sky{background:radial-gradient(1px 1px at 12% 18%,#fff8,transparent),radial-gradient(1px 1px at 72% 12%,#fff9,transparent),radial-gradient(1.5px 1.5px at 40% 30%,#fff7,transparent),radial-gradient(1px 1px at 88% 40%,#fff8,transparent),radial-gradient(1px 1px at 25% 60%,#fff6,transparent),linear-gradient(var(--bg2),var(--bg))}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;font-size:18px}
+.brand img{width:32px;height:32px;border-radius:9px}
+.nav{display:flex;align-items:center;gap:14px;font-size:14px}
+.nav .lang{color:var(--sub);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--moon);color:#1a2338;text-decoration:none;font-weight:700;border-radius:999px;padding:13px 24px;font-size:15px;font-family:Pretendard,sans-serif}
+.btn.sm{padding:8px 16px;font-size:14px}
+.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:36px;align-items:center;padding:48px 20px 72px}
+.hero .icon{width:76px;height:76px;border-radius:20px;margin-bottom:22px;box-shadow:0 0 40px rgba(246,223,160,.25)}
+.hero h1{font-size:clamp(34px,5.5vw,52px);font-weight:400;line-height:1.3;letter-spacing:-.01em}
+.hero .meaning{font-size:13px;color:var(--moon);margin-top:8px;opacity:.85}
+.hero p{color:var(--sub);font-size:17px;margin:18px 0 28px}
+.art2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.art2 img{width:100%;height:auto;border-radius:22px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.feat{background:#fff;color:#1d2433;padding:80px 0}
+.feat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feat-item{text-align:center}
+.feat-item .kicker{color:var(--coral);font-size:14px;font-weight:700}
+.feat-item h2{font-size:18px;font-weight:400;line-height:1.6;margin:6px 0 20px;min-height:58px}
+.feat-item img{width:100%;max-width:280px;height:auto;border-radius:20px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.sec{padding:80px 0}
+.sec-title{text-align:center;font-size:clamp(26px,4vw,34px);font-weight:400;line-height:1.4;margin-bottom:40px}
+.sec-title b{color:var(--moon);font-weight:400}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.card h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.card h3::before{content:"\2726";color:var(--moon);margin-right:8px}
+.card p{color:var(--sub);font-size:15px}
+.whom ul{list-style:none;max-width:600px;margin:0 auto;display:grid;gap:10px}
+.whom li{background:var(--card);border-radius:14px;padding:14px 20px}
+.whom li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--moon);box-shadow:0 0 10px var(--moon);margin-right:12px;vertical-align:middle}
+.cta{text-align:center;padding:90px 20px}
+.cta h2{font-size:clamp(28px,5vw,42px);font-weight:400;line-height:1.35;margin-bottom:28px}
+footer{border-top:1px solid var(--line);padding:28px 0 44px;font-size:12px;color:var(--sub);font-family:Pretendard,sans-serif}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;text-align:center;padding:24px 16px 48px}
+  .feat-row{grid-template-columns:1fr;gap:48px}
+  .feat-item img{max-width:240px}
+  .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+<div class="sky">
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="../img/icon.png" alt="">Yunseul</a>
+    <nav class="nav"><a class="lang" href="../" hreflang="ko">한국어</a><a class="btn sm" href="https://play.google.com/store/apps/details?id=com.offsong.yunseul_diary&hl=en">Install</a></nav>
+  </div>
+</header>
+  <section class="wrap hero">
+    <div>
+      <img class="icon" src="../img/icon.png" alt="">
+      <h1>Ask yourself<br>one question<br>today</h1>
+      <div class="meaning">Yunseul · the shimmer of sunlight or moonlight on rippling water</div>
+      <p>Answer a new question every day.<br>Each answer turns on a light in a quiet night scene,<br>and your own night slowly begins to glow.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.yunseul_diary&hl=en"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Zm11.3 11.3 2.6 2.6-11.7 6.7 9.1-9.3Zm0-2.2L5.8 1.6l11.7 6.7-2.6 2.6Zm3.9-1.6 2.8 1.6c.8.5.8 1.7 0 2.2l-2.8 1.6-2.8-2.7 2.8-2.7Z"/></svg> Get it on Google Play</a>
+    </div>
+    <div class="art2"><img src="../img/en/hero1.png" alt="Yunseul home screen with today&rsquo;s question over a night village" width="720" height="1280"><img src="../img/en/hero2.png" alt="" width="720" height="1280"></div>
+  </section>
+</div>
+<main>
+  <section class="feat">
+    <div class="wrap feat-row">
+      <div class="feat-item"><div class="kicker">Today&rsquo;s Question</div><h2>Answer a new question every day.<br>Each answer lights up the dark night.</h2><img src="../img/en/f3.png" alt="Today&rsquo;s question over a village at sunset" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><div class="kicker">New Themes</div><h2>Keep a 30-day record<br>to unlock a new theme.</h2><img src="../img/en/f2.png" alt="Village, winter, spring and autumn themes" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><div class="kicker">My Journal</div><h2>Look back on your answers with each scene.<br>Back up to Google Drive and keep them safe.</h2><img src="../img/en/f1.png" alt="Album of past answers" loading="lazy" width="720" height="1280"></div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="sec-title">How <b>one line a day</b> adds up</h2>
+      <div class="grid">
+        <article class="card"><h3>One question a day</h3><p>A new random question arrives daily. Answered questions never repeat, and new ones keep coming.</p></article>
+        <article class="card"><h3>Themes that light up</h3><p>Each answer lights a window. Choose a 30, 60 or 90-day journey.</p></article>
+        <article class="card"><h3>Your album</h3><p>Look back on every answer alongside that day&rsquo;s scene.</p></article>
+        <article class="card"><h3>Home screen widget</h3><p>See today&rsquo;s question at a glance in 4×1 or 3×2 sizes.</p></article>
+        <article class="card"><h3>Google Drive backup</h3><p>Back up and restore your journal with your own Google Drive.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="sec whom" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="sec-title"><b>Perfect</b> for you if</h2>
+      <ul>
+        <li>You want to journal but don&rsquo;t know what to write</li>
+        <li>You&rsquo;d like a gentle, one-line-a-day habit</li>
+        <li>You want to get to know yourself a little better</li>
+      </ul>
+    </div>
+  </section>
+  <section class="cta sky">
+    <h2>Turn on your first light<br>tonight</h2>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.yunseul_diary&hl=en">Get it on Google Play</a>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Project J Lab · <a href="mailto:dhsthdwjd1@gmail.com">dhsthdwjd1@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f0f1ee">
+<title>Farm Work Ledger - Custom Farming Job, Payment &amp; Balance Tracker App</title>
+<meta name="description" content="Made for farm service operators who work other people&rsquo;s fields with tractors, combines and harvesters. Log jobs, calculate charges, track fuel and net earnings, customer payments and balances due.">
+<meta name="keywords" content="farm work ledger, custom farming app, farm job tracker, tractor work log, custom harvesting invoice, farm service billing, accounts receivable farm">
+<link rel="canonical" href="https://projectjlab.github.io/farmledger/en/">
+<link rel="alternate" hreflang="ko" href="https://projectjlab.github.io/farmledger/">
+<link rel="alternate" hreflang="en" href="https://projectjlab.github.io/farmledger/en/">
+<link rel="alternate" hreflang="x-default" href="https://projectjlab.github.io/farmledger/en/">
+<link rel="icon" href="../img/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Farm Work Ledger - Jobs, fuel, payments and balances">
+<meta property="og:description" content="Track field jobs, equipment, fuel, customer payments and balances in one place.">
+<meta property="og:image" content="https://projectjlab.github.io/farmledger/img/en/hero2.png">
+<meta property="og:url" content="https://projectjlab.github.io/farmledger/en/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"Farm Work Ledger: Jobs &amp; Pay","operatingSystem":"Android","applicationCategory":"BusinessApplication","inLanguage":"en","description":"Track field jobs, equipment, fuel, customer payments and balances in one place.","image":"https://projectjlab.github.io/farmledger/img/icon.png","installUrl":"https://play.google.com/store/apps/details?id=com.offsong.farm_ledger&hl=en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Project J Lab"}}
+</script>
+<style>
+:root{--bg:#f0f1ee;--bg2:#f0f1ee;--card:#ffffff;--text:#151714;--sub:#62675f;--line:#dfe2db;--moon:#3a8f1c;--coral:#151714;--grad:#151714}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:Pretendard,-apple-system,sans-serif;line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.sky{background:#f0f1ee;color:#151714}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;font-size:18px}
+.brand img{width:32px;height:32px;border-radius:9px}
+.nav{display:flex;align-items:center;gap:14px;font-size:14px}
+.nav .lang{color:var(--sub);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:13px 24px;font-size:15px;font-family:Pretendard,sans-serif}
+.btn.sm{padding:8px 16px;font-size:14px}
+.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:36px;align-items:center;padding:48px 20px 72px}
+.hero .icon{width:76px;height:76px;border-radius:20px;margin-bottom:22px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.hero h1 b{background:linear-gradient(transparent 58%,#9be36b 58%)}
+.hero h1{font-size:clamp(34px,5.5vw,52px);font-weight:800;line-height:1.3;letter-spacing:-.01em}
+.hero .meaning{font-size:13px;color:var(--moon);margin-top:8px;opacity:.85}
+.hero p{color:var(--sub);font-size:17px;margin:18px 0 28px}
+.art2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.art2 img{width:100%;height:auto;border-radius:22px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.feat{background:#fff;color:#1d2433;padding:80px 0}
+.feat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feat-item{text-align:center}
+.feat-item .kicker{display:inline-block;background:#9be36b;color:#151714;font-size:13px;font-weight:800;padding:3px 14px;border-radius:99px}
+.feat-item h2{font-size:18px;font-weight:700;line-height:1.6;margin:6px 0 20px;min-height:58px}
+.feat-item img{width:100%;max-width:280px;height:auto;border-radius:20px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.sec{padding:80px 0}
+.sec-title{text-align:center;font-size:clamp(26px,4vw,34px);font-weight:800;line-height:1.4;margin-bottom:40px}
+.sec-title b{background:linear-gradient(transparent 58%,#9be36b 58%)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.card h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.card h3::before{content:"\25CF";color:#6cc443;color:var(--moon);margin-right:8px}
+.card p{color:var(--sub);font-size:15px}
+.whom ul{list-style:none;max-width:600px;margin:0 auto;display:grid;gap:10px}
+.whom li{background:var(--card);border-radius:14px;padding:14px 20px}
+.whom li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#6cc443;margin-right:12px;vertical-align:middle}
+.cta{text-align:center;padding:90px 20px}
+.cta h2{font-size:clamp(28px,5vw,42px);font-weight:800;line-height:1.35;margin-bottom:28px}
+footer{border-top:1px solid var(--line);padding:28px 0 44px;font-size:12px;color:var(--sub);font-family:Pretendard,sans-serif}
+.cta .btn{background:#9be36b;color:#151714}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;text-align:center;padding:24px 16px 48px}
+  .feat-row{grid-template-columns:1fr;gap:48px}
+  .feat-item img{max-width:240px}
+  .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+<div class="sky">
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="../img/icon.png" alt="">Farm Work Ledger</a>
+    <nav class="nav"><a class="lang" href="../" hreflang="ko">한국어</a><a class="btn sm" href="https://play.google.com/store/apps/details?id=com.offsong.farm_ledger&hl=en">Install</a></nav>
+  </div>
+</header>
+  <section class="wrap hero">
+    <div>
+      <img class="icon" src="../img/icon.png" alt="">
+      <h1>From field work<br>to <b>customer settlement</b></h1>
+      <div class="meaning">For tractor, combine and harvester operators</div>
+      <p>Log the date, customer, job and equipment &mdash;<br>the charge is calculated and every customer&rsquo;s<br>payments and balance stay organized.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.farm_ledger&hl=en"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Zm11.3 11.3 2.6 2.6-11.7 6.7 9.1-9.3Zm0-2.2L5.8 1.6l11.7 6.7-2.6 2.6Zm3.9-1.6 2.8 1.6c.8.5.8 1.7 0 2.2l-2.8 1.6-2.8-2.7 2.8-2.7Z"/></svg> Get it on Google Play</a>
+    </div>
+    <div class="art2"><img src="../img/en/hero1.png" alt="Home screen with monthly net earnings, billed work, fuel and payments" width="720" height="1280"><img src="../img/en/hero2.png" alt="" width="720" height="1280"></div>
+  </section>
+</div>
+<main>
+  <section class="feat">
+    <div class="wrap feat-row">
+      <div class="feat-item"><div class="kicker">Job insights</div><h2>Compare earnings by job type<br>and filter by date or machine.</h2><img src="../img/en/f1.png" alt="Statistics with billed totals and job type breakdown" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><div class="kicker">Customer ledger</div><h2>Track charges and payments<br>to see who still owes you.</h2><img src="../img/en/f2.png" alt="Customer list with balances due" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><div class="kicker">Account details</div><h2>Review customer transactions<br>and check their balance.</h2><img src="../img/en/f3.png" alt="One customer&rsquo;s jobs and payments" loading="lazy" width="720" height="1280"></div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="sec-title">From the field <b>to settlement</b></h2>
+      <div class="grid">
+        <article class="card"><h3>Log every job</h3><p>Save date, customer, job type, equipment, field and notes. Charge by hour, area or trip and the job charge is calculated.</p></article>
+        <article class="card"><h3>Net of fuel</h3><p>Record fuel separately from the bill and see net earnings. Overnight work time is calculated too.</p></article>
+        <article class="card"><h3>Your area units</h3><p>Acres, hectares or square meters &mdash; whatever fits your work.</p></article>
+        <article class="card"><h3>Reuse past rates</h3><p>Prefill the rate, charge method and equipment from a similar past job.</p></article>
+        <article class="card"><h3>Customer accounts</h3><p>Add payments and advances, see balances due, and share a text statement.</p></article>
+        <article class="card"><h3>Google Drive backup</h3><p>Your ledger is saved on your device, with optional backup and restore.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="sec whom" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="sec-title"><b>Built for</b></h2>
+      <ul>
+        <li>Operators doing custom field work with tractors and combines</li>
+        <li>Anyone tired of tracking charges and balances in a notebook</li>
+        <li>Owners who want earnings by equipment and job type</li>
+        <li>Anyone who sends customers account statements</li>
+      </ul>
+    </div>
+  </section>
+  <section class="cta" style="background:#151714;color:#fff">
+    <h2>Your jobs and payments,<br>in one ledger</h2>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.farm_ledger&hl=en">Get it on Google Play</a>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Your ledger is saved on your device, with optional backup to Google Drive.</p>
+    <p>Project J Lab · <a href="mailto:dhsthdwjd1@gmail.com">dhsthdwjd1@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>

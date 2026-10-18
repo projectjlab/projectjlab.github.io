@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f0f1ee">
+<title>농기계 작업 장부 - 농작업 대행 작업비·미수금 관리 앱 | 트랙터·콤바인 작업 기록</title>
+<meta name="description" content="트랙터·콤바인·굴착기로 남의 논밭 일을 맡는 농기계 작업자를 위한 장부 앱. 작업 기록, 작업비 계산, 연료비와 순수익, 고객별 입금·미수금, 월별 통계까지 한곳에서 관리하세요.">
+<meta name="keywords" content="농기계 작업 장부, 농작업 장부, 농기계 작업비, 미수금 관리, 트랙터 작업 기록, 콤바인 작업비, 농작업 대행, 마지기 계산, 농기계 장부 앱">
+<link rel="canonical" href="https://projectjlab.github.io/farmledger/">
+<link rel="alternate" hreflang="ko" href="https://projectjlab.github.io/farmledger/">
+<link rel="alternate" hreflang="en" href="https://projectjlab.github.io/farmledger/en/">
+<link rel="alternate" hreflang="x-default" href="https://projectjlab.github.io/farmledger/en/">
+<link rel="icon" href="img/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="농기계 작업 장부 - 작업비·미수금 한곳에서">
+<meta property="og:description" content="농기계 작업과 작업비·연료비, 고객 수금·미수금까지 한곳에서 관리하세요.">
+<meta property="og:image" content="https://projectjlab.github.io/farmledger/img/hero2.png">
+<meta property="og:url" content="https://projectjlab.github.io/farmledger/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"농기계 작업 장부: 작업비·미수금 관리","operatingSystem":"Android","applicationCategory":"BusinessApplication","inLanguage":"ko","description":"농기계 작업과 작업비·연료비, 고객 수금·미수금까지 한곳에서 관리하세요.","image":"https://projectjlab.github.io/farmledger/img/icon.png","installUrl":"https://play.google.com/store/apps/details?id=com.offsong.farm_ledger&hl=ko","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"author":{"@type":"Organization","name":"Project J Lab"}}
+</script>
+<style>
+:root{--bg:#f0f1ee;--bg2:#f0f1ee;--card:#ffffff;--text:#151714;--sub:#62675f;--line:#dfe2db;--moon:#3a8f1c;--coral:#151714;--grad:#151714}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:Pretendard,-apple-system,sans-serif;line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.sky{background:#f0f1ee;color:#151714}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;font-size:18px}
+.brand img{width:32px;height:32px;border-radius:9px}
+.nav{display:flex;align-items:center;gap:14px;font-size:14px}
+.nav .lang{color:var(--sub);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:13px 24px;font-size:15px;font-family:Pretendard,sans-serif}
+.btn.sm{padding:8px 16px;font-size:14px}
+.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:36px;align-items:center;padding:48px 20px 72px}
+.hero .icon{width:76px;height:76px;border-radius:20px;margin-bottom:22px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.hero h1 b{background:linear-gradient(transparent 58%,#9be36b 58%)}
+.hero h1{font-size:clamp(34px,5.5vw,52px);font-weight:800;line-height:1.3;letter-spacing:-.01em}
+.hero .meaning{font-size:13px;color:var(--moon);margin-top:8px;opacity:.85}
+.hero p{color:var(--sub);font-size:17px;margin:18px 0 28px}
+.art2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.art2 img{width:100%;height:auto;border-radius:22px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.feat{background:#fff;color:#1d2433;padding:80px 0}
+.feat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feat-item{text-align:center}
+.feat-item .kicker{display:inline-block;background:#9be36b;color:#151714;font-size:13px;font-weight:800;padding:3px 14px;border-radius:99px}
+.feat-item h2{font-size:18px;font-weight:700;line-height:1.6;margin:6px 0 20px;min-height:58px}
+.feat-item img{width:100%;max-width:280px;height:auto;border-radius:20px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.sec{padding:80px 0}
+.sec-title{text-align:center;font-size:clamp(26px,4vw,34px);font-weight:800;line-height:1.4;margin-bottom:40px}
+.sec-title b{background:linear-gradient(transparent 58%,#9be36b 58%)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.card h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.card h3::before{content:"\25CF";color:#6cc443;color:var(--moon);margin-right:8px}
+.card p{color:var(--sub);font-size:15px}
+.whom ul{list-style:none;max-width:600px;margin:0 auto;display:grid;gap:10px}
+.whom li{background:var(--card);border-radius:14px;padding:14px 20px}
+.whom li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#6cc443;margin-right:12px;vertical-align:middle}
+.cta{text-align:center;padding:90px 20px}
+.cta h2{font-size:clamp(28px,5vw,42px);font-weight:800;line-height:1.35;margin-bottom:28px}
+footer{border-top:1px solid var(--line);padding:28px 0 44px;font-size:12px;color:var(--sub);font-family:Pretendard,sans-serif}
+.cta .btn{background:#9be36b;color:#151714}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;text-align:center;padding:24px 16px 48px}
+  .feat-row{grid-template-columns:1fr;gap:48px}
+  .feat-item img{max-width:240px}
+  .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+<div class="sky">
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/icon.png" alt="">농기계 작업 장부</a>
+    <nav class="nav"><a class="lang" href="en/" hreflang="en">English</a><a class="btn sm" href="https://play.google.com/store/apps/details?id=com.offsong.farm_ledger&hl=ko">설치</a></nav>
+  </div>
+</header>
+  <section class="wrap hero">
+    <div>
+      <img class="icon" src="img/icon.png" alt="">
+      <h1>작업 기록부터<br><b>고객 정산까지</b></h1>
+      <div class="meaning">트랙터 · 콤바인 · 굴착기 작업자를 위한 장부</div>
+      <p>날짜, 고객, 작업, 장비만 적으면 작업비가 계산되고<br>고객별 입금과 미수금이 한눈에 정리돼요.<br>수첩 대신 휴대폰으로 장부를 쓰세요.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.farm_ledger&hl=ko"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Zm11.3 11.3 2.6 2.6-11.7 6.7 9.1-9.3Zm0-2.2L5.8 1.6l11.7 6.7-2.6 2.6Zm3.9-1.6 2.8 1.6c.8.5.8 1.7 0 2.2l-2.8 1.6-2.8-2.7 2.8-2.7Z"/></svg> Google Play에서 무료로 받기</a>
+    </div>
+    <div class="art2"><img src="img/hero1.png" alt="이번 달 순수익과 작업비, 연료비, 받은 돈이 정리된 홈 화면" width="720" height="1280"><img src="img/hero2.png" alt="" width="720" height="1280"></div>
+  </section>
+</div>
+<main>
+  <section class="feat">
+    <div class="wrap feat-row">
+      <div class="feat-item"><div class="kicker">작업 통계</div><h2>기간·농기계·작업 종류별 수익을 비교해,<br>어떤 작업의 수익이 높은지 확인</h2><img src="img/f1.png" alt="기간별 작업비와 작업 종류 구성 비율 통계 화면" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><div class="kicker">고객 장부</div><h2>고객별 작업비와 입금 내역을 기록해,<br>미수금과 정산 금액을 확인</h2><img src="img/f2.png" alt="고객별 미수금이 표시된 고객 장부 화면" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><div class="kicker">거래 내역</div><h2>고객별 작업·입금·미수금을 함께 모아,<br>농기계 작업 거래 내역을 한눈에 확인</h2><img src="img/f3.png" alt="한 고객의 작업과 입금 거래 내역 화면" loading="lazy" width="720" height="1280"></div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="sec-title">현장 작업부터 <b>정산까지</b></h2>
+      <div class="grid">
+        <article class="card"><h3>작업 한 건도 빠짐없이</h3><p>날짜, 고객, 작업 종류, 장비, 논밭 위치, 메모를 함께 저장해요. 시간·면적·횟수로 요금을 정하고 수량과 단가로 작업비를 계산해요.</p></article>
+        <article class="card"><h3>연료비 빼고 순수익</h3><p>연료비를 작업비와 따로 적어 순수익을 바로 확인해요. 자정을 넘긴 작업 시간도 계산돼요.</p></article>
+        <article class="card"><h3>평·마지기도 그대로</h3><p>평, 마지기, ㎡, 헥타르, 에이커 등 익숙한 면적 단위를 그대로 써요.</p></article>
+        <article class="card"><h3>이전 단가 불러오기</h3><p>같은 고객, 같은 작업이면 이전 단가와 요금 방식, 장비를 불러와요.</p></article>
+        <article class="card"><h3>고객별 장부</h3><p>입금과 선수금을 기록하면 미수금과 남은 선수금이 정리되고, 정산 내역을 문자로 보낼 수 있어요.</p></article>
+        <article class="card"><h3>Google Drive 백업</h3><p>장부는 기기에 저장되고, 원할 때 Google Drive에 백업하고 복원할 수 있어요.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="sec whom" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="sec-title"><b>이런 분께</b> 필요해요</h2>
+      <ul>
+        <li>트랙터·콤바인으로 다른 농가의 논밭 일을 맡는 분</li>
+        <li>수첩에 적던 작업비와 미수금을 정리하고 싶은 분</li>
+        <li>장비별, 작업별로 얼마를 벌었는지 알고 싶은 분</li>
+        <li>고객에게 정산 내역을 깔끔하게 보내고 싶은 분</li>
+      </ul>
+    </div>
+  </section>
+  <section class="cta" style="background:#151714;color:#fff">
+    <h2>흩어진 작업 기록,<br>이제 장부 하나로</h2>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.farm_ledger&hl=ko">Google Play에서 무료로 받기</a>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>작업 장부 데이터는 기기에 저장되며, 원할 때 Google Drive에 백업할 수 있어요.</p>
+    <p>Project J Lab · <a href="mailto:dhsthdwjd1@gmail.com">dhsthdwjd1@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>

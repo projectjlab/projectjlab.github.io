@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ebe5d6">
+<title>감정의 해답 - 심리테스트·성격테스트 앱 | 그림 심리테스트, 연애 스타일 테스트</title>
+<meta name="description" content="그림 한 장, 질문 하나로 알아보는 내 성격과 연애 스타일. 동물 성향, 매력, 첫인상, 아이스크림 연애 테스트까지 몇 분이면 끝나는 가벼운 심리테스트를 즐겨 보세요.">
+<meta name="keywords" content="심리테스트, 성격테스트, 그림 심리테스트, 연애 스타일 테스트, 성격 유형, 내향 외향 테스트, 첫인상 테스트, 재미있는 테스트, MBTI 같은 테스트">
+<link rel="canonical" href="https://projectjlab.github.io/mindtest/">
+<link rel="alternate" hreflang="ko" href="https://projectjlab.github.io/mindtest/">
+<link rel="alternate" hreflang="en" href="https://projectjlab.github.io/mindtest/en/">
+<link rel="alternate" hreflang="x-default" href="https://projectjlab.github.io/mindtest/en/">
+<link rel="icon" href="img/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="감정의 해답 - 나도 몰랐던 진짜 내 모습">
+<meta property="og:description" content="그림 한 장, 질문 하나로 알아보는 내 성격과 연애 스타일. 가볍게 즐기는 심리테스트.">
+<meta property="og:image" content="https://projectjlab.github.io/mindtest/img/hero2.png">
+<meta property="og:url" content="https://projectjlab.github.io/mindtest/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"감정의 해답: 심리테스트 성격테스트","operatingSystem":"Android","applicationCategory":"EntertainmentApplication","inLanguage":"ko","description":"그림 한 장, 질문 하나로 알아보는 내 성격과 연애 스타일. 가볍게 즐기는 심리테스트.","image":"https://projectjlab.github.io/mindtest/img/icon.png","installUrl":"https://play.google.com/store/apps/details?id=com.offsong.mind_answers&hl=ko","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"author":{"@type":"Organization","name":"Project J Lab"}}
+</script>
+<style>
+:root{--bg:#f7f4ec;--bg2:#ebe5d6;--card:#ffffff;--text:#1c1a17;--sub:#6e685d;--line:#e2dccd;--moon:#f2902a;--coral:#111;--grad:#1c1a17}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:Pretendard,-apple-system,sans-serif;line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.sky{background:#ebe5d6;color:#1c1a17}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;font-size:18px}
+.brand img{width:32px;height:32px;border-radius:9px}
+.nav{display:flex;align-items:center;gap:14px;font-size:14px}
+.nav .lang{color:var(--sub);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:13px 24px;font-size:15px;font-family:Pretendard,sans-serif}
+.btn.sm{padding:8px 16px;font-size:14px}
+.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:36px;align-items:center;padding:48px 20px 72px}
+.hero .icon{width:76px;height:76px;border-radius:20px;margin-bottom:22px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.hero h1 b{color:#f2902a}
+.hero h1{font-size:clamp(34px,5.5vw,52px);font-weight:800;line-height:1.3;letter-spacing:-.01em}
+.hero .meaning{font-size:13px;color:var(--moon);margin-top:8px;opacity:.85}
+.hero p{color:var(--sub);font-size:17px;margin:18px 0 28px}
+.art2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.art2 img{width:100%;height:auto;border-radius:22px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.feat{background:#fff;color:#1d2433;padding:80px 0}
+.feat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feat-item{text-align:center}
+.feat-item .kicker{color:#f2902a;font-size:14px;font-weight:700}
+.feat-item h2{font-size:18px;font-weight:700;line-height:1.6;margin:6px 0 20px;min-height:58px}
+.feat-item img{width:100%;max-width:280px;height:auto;border-radius:20px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.sec{padding:80px 0}
+.sec-title{text-align:center;font-size:clamp(26px,4vw,34px);font-weight:800;line-height:1.4;margin-bottom:40px}
+.sec-title b{color:var(--moon)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.card h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.card h3::before{content:"\2756";color:var(--moon);margin-right:8px}
+.card p{color:var(--sub);font-size:15px}
+.whom ul{list-style:none;max-width:600px;margin:0 auto;display:grid;gap:10px}
+.whom li{background:var(--card);border-radius:14px;padding:14px 20px}
+.whom li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--moon);margin-right:12px;vertical-align:middle}
+.cta{text-align:center;padding:90px 20px}
+.cta h2{font-size:clamp(28px,5vw,42px);font-weight:800;line-height:1.35;margin-bottom:28px}
+footer{border-top:1px solid var(--line);padding:28px 0 44px;font-size:12px;color:var(--sub);font-family:Pretendard,sans-serif}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;text-align:center;padding:24px 16px 48px}
+  .feat-row{grid-template-columns:1fr;gap:48px}
+  .feat-item img{max-width:240px}
+  .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+<div class="sky">
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/icon.png" alt="">감정의 해답</a>
+    <nav class="nav"><a class="lang" href="en/" hreflang="en">English</a><a class="btn sm" href="https://play.google.com/store/apps/details?id=com.offsong.mind_answers&hl=ko">설치</a></nav>
+  </div>
+</header>
+  <section class="wrap hero">
+    <div>
+      <img class="icon" src="img/icon.png" alt="">
+      <h1>나도 몰랐던<br><b>진짜 내 모습</b></h1>
+      <div class="meaning">그림 한 장, 질문 하나로 알아보는 심리테스트</div>
+      <p>그림을 고르고 질문에 답하다 보면<br>내 성격과 매력, 첫인상, 연애 스타일까지 하나씩 보여요.<br>몇 분이면 끝나는 가벼운 테스트예요.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.mind_answers&hl=ko"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Zm11.3 11.3 2.6 2.6-11.7 6.7 9.1-9.3Zm0-2.2L5.8 1.6l11.7 6.7-2.6 2.6Zm3.9-1.6 2.8 1.6c.8.5.8 1.7 0 2.2l-2.8 1.6-2.8-2.7 2.8-2.7Z"/></svg> Google Play에서 무료로 받기</a>
+      <p style="font-size:12px;margin:12px 0 0;opacity:.7">재미로 즐기는 테스트예요.</p>
+    </div>
+    <div class="art2"><img src="img/hero1.png" alt="감정의 해답 테스트 시작 화면과 테스트 목록" width="720" height="1280"><img src="img/hero2.png" alt="" width="720" height="1280"></div>
+  </section>
+</div>
+<main>
+  <section class="feat">
+    <div class="wrap feat-row">
+      <div class="feat-item"><div class="kicker">다양한 심리테스트 제공</div><h2>여러 주제와 유형의<br>심리테스트를 제공합니다.</h2><img src="img/f1.png" alt="소심한 성격, 동물 성향, 매력, 첫인상, 연애 테스트 목록" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><div class="kicker">간편한 점수 계산</div><h2>문제를 풀면 점수가<br>자동으로 계산됩니다.</h2><img src="img/f2.png" alt="마음에 드는 그림을 고르는 문항 화면" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><div class="kicker">즉시 결과 제공</div><h2>테스트 완료 후 결과를<br>즉시 확인할 수 있습니다.</h2><img src="img/f3.png" alt="점수별 성격 유형 결과 화면" loading="lazy" width="720" height="1280"></div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="sec-title"><b>이런 테스트</b>가 있어요</h2>
+      <div class="grid">
+        <article class="card"><h3>소심한 성격 그림 테스트</h3><p>마음에 드는 그림으로 알아보는 내향·외향 성향.</p></article>
+        <article class="card"><h3>동물 성향 성격 테스트</h3><p>나를 닮은 동물은 토끼일까, 사자일까?</p></article>
+        <article class="card"><h3>매력 심리 테스트</h3><p>착시 그림으로 알아보는 나만의 꽃 같은 매력.</p></article>
+        <article class="card"><h3>첫인상 성격 테스트</h3><p>사람들이 처음 보는 나는 어떤 신을 닮았을까?</p></article>
+        <article class="card"><h3>아이스크림 연애 테스트</h3><p>토핑 하나로 보는 내 연애 스타일.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="sec whom" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="sec-title"><b>이런 분께</b> 추천해요</h2>
+      <ul>
+        <li>나에 대해 더 알고 싶은 분</li>
+        <li>친구, 연인과 함께 결과를 비교해 보고 싶은 분</li>
+        <li>쉬는 시간에 가볍게 즐길 콘텐츠를 찾는 분</li>
+      </ul>
+    </div>
+  </section>
+  <section class="cta sky">
+    <h2>오늘은 어떤 내 모습을<br>발견하게 될까요?</h2>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.mind_answers&hl=ko">Google Play에서 무료로 받기</a>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>감정의 해답의 테스트는 재미로 즐기는 콘텐츠이며, 전문적인 심리 검사나 진단을 대신하지 않습니다.</p>
+    <p>Project J Lab · <a href="mailto:dhsthdwjd1@gmail.com">dhsthdwjd1@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>

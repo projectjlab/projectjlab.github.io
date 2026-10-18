@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>Photo Compressor &amp; Resizer - Reduce Image File Size, Batch Compress to KB</title>
+<meta name="description" content="Compress multiple photos at once, hit a target size like 100KB, 200KB or 500KB, and fine-tune quality, dimensions, resolution and format. Photos are processed on your device.">
+<meta name="keywords" content="photo compressor, compress image, reduce photo size, image resizer, resize photo, compress to 100kb, batch compress photos, jpg compressor">
+<link rel="canonical" href="https://projectjlab.github.io/compress/en/">
+<link rel="alternate" hreflang="ko" href="https://projectjlab.github.io/compress/">
+<link rel="alternate" hreflang="en" href="https://projectjlab.github.io/compress/en/">
+<link rel="alternate" hreflang="x-default" href="https://projectjlab.github.io/compress/en/">
+<link rel="icon" href="../img/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Photo Compressor &amp; Resizer - Smaller files, clear photos">
+<meta property="og:description" content="Reduce photo file size quickly while keeping your images looking clear.">
+<meta property="og:image" content="https://projectjlab.github.io/compress/img/en/hero2.png">
+<meta property="og:url" content="https://projectjlab.github.io/compress/en/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"Photo Compressor &amp; Resizer","operatingSystem":"Android","applicationCategory":"PhotographyApplication","inLanguage":"en","description":"Reduce photo file size quickly while keeping your images looking clear.","image":"https://projectjlab.github.io/compress/img/icon.png","installUrl":"https://play.google.com/store/apps/details?id=com.offsong.compress_image&hl=en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Project J Lab"}}
+</script>
+<style>
+:root{--bg:#ffffff;--bg2:#ffffff;--card:#f5f7fb;--text:#111418;--sub:#5d6573;--line:#e4e8ee;--moon:#1e50ff;--coral:#1e50ff;--grad:#1e50ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:Pretendard,-apple-system,sans-serif;line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.sky{background:#fff;color:#111418}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;font-size:18px}
+.brand img{width:32px;height:32px;border-radius:9px}
+.nav{display:flex;align-items:center;gap:14px;font-size:14px}
+.nav .lang{color:var(--sub);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:13px 24px;font-size:15px;font-family:Pretendard,sans-serif}
+.btn.sm{padding:8px 16px;font-size:14px}
+.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:36px;align-items:center;padding:48px 20px 72px}
+.hero .icon{width:76px;height:76px;border-radius:20px;margin-bottom:22px;box-shadow:0 6px 24px rgba(0,0,0,.15)}
+.hero h1 b{color:#1e50ff}
+.hero h1{font-size:clamp(34px,5.5vw,52px);font-weight:800;line-height:1.3;letter-spacing:-.01em}
+.hero .meaning{font-size:13px;color:var(--moon);margin-top:8px;opacity:.85}
+.hero p{color:var(--sub);font-size:17px;margin:18px 0 28px}
+.art2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.art2 img{width:100%;height:auto;border-radius:22px;box-shadow:0 10px 30px rgba(30,80,255,.12);border:1px solid #eef1f6}
+.feat{background:#fff;color:#1d2433;padding:80px 0}
+.feat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feat-item{text-align:center}
+.feat-item .kicker{color:#1e50ff;font-size:14px;font-weight:700}
+.feat-item h2{font-size:18px;font-weight:700;line-height:1.6;margin:6px 0 20px;min-height:58px}
+.feat-item img{width:100%;max-width:280px;height:auto;border-radius:20px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.sec{padding:80px 0}
+.sec-title{text-align:center;font-size:clamp(26px,4vw,34px);font-weight:800;line-height:1.4;margin-bottom:40px}
+.sec-title b{color:var(--moon)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.card h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.card h3::before{content:"\25C9";color:var(--moon);margin-right:8px}
+.card p{color:var(--sub);font-size:15px}
+.whom ul{list-style:none;max-width:600px;margin:0 auto;display:grid;gap:10px}
+.whom li{background:var(--card);border-radius:14px;padding:14px 20px}
+.whom li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--moon);margin-right:12px;vertical-align:middle}
+.cta{text-align:center;padding:90px 20px}
+.cta h2{font-size:clamp(28px,5vw,42px);font-weight:800;line-height:1.35;margin-bottom:28px}
+footer{border-top:1px solid var(--line);padding:28px 0 44px;font-size:12px;color:var(--sub);font-family:Pretendard,sans-serif}
+
+.demo{padding:72px 0;background:#f3f6ff}
+.demo h2{text-align:center;font-size:clamp(24px,4vw,32px);font-weight:800;margin-bottom:32px}
+.dcard{max-width:520px;margin:0 auto;background:#fff;border-radius:24px;padding:28px;box-shadow:0 12px 40px rgba(30,80,255,.12);text-align:center}
+.dstage{position:relative;height:250px;display:flex;align-items:center;justify-content:center}
+.dphoto{width:300px;height:230px;border-radius:16px;background:center/cover no-repeat;transition:transform 1.6s cubic-bezier(.6,0,.2,1),filter 1.6s;position:relative;overflow:hidden}
+.dphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%)}
+.run .dphoto{transform:scale(.62)}
+.run .dphoto::after{animation:shine 1.2s .2s ease-in-out}
+@keyframes shine{to{transform:translateX(120%)}}
+.arr{position:absolute;width:34px;height:34px;color:#1e50ff;opacity:0;transition:opacity .3s,transform 1.6s cubic-bezier(.6,0,.2,1)}
+.arr svg{width:100%;height:100%}
+.a1{top:0;left:calc(50% - 190px)}.a2{top:0;right:calc(50% - 190px);transform:scaleX(-1)}.a3{bottom:0;left:calc(50% - 190px);transform:scaleY(-1)}.a4{bottom:0;right:calc(50% - 190px);transform:scale(-1)}
+.run .arr{opacity:1}
+.run .a1{transform:translate(56px,40px)}.run .a2{transform:scaleX(-1) translate(56px,40px)}.run .a3{transform:scaleY(-1) translate(56px,40px)}.run .a4{transform:scale(-1) translate(56px,40px)}
+.done .arr{opacity:0}
+.dfile{font-size:14px;color:var(--sub);margin-top:14px}
+.dsize{display:flex;align-items:baseline;justify-content:center;gap:10px;margin:6px 0 14px}
+.dsize b{font-size:44px;font-weight:800;color:#1e50ff;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.dsize span{font-size:18px;font-weight:700;color:#1e50ff}
+.dbar{height:10px;background:#e7ecfb;border-radius:99px;overflow:hidden}
+.dbar i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#1e50ff,#5d86ff);border-radius:99px;transition:width 1.6s cubic-bezier(.6,0,.2,1)}
+.drow{display:flex;justify-content:space-between;font-size:13px;color:var(--sub);margin-top:10px}
+.dstat{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-weight:700;color:#14a37f;opacity:0;transform:translateY(6px);transition:all .4s}
+.done .dstat{opacity:1;transform:none}
+.dstat em{font-style:normal;background:#e3f7ef;padding:2px 10px;border-radius:99px}
+.dre{margin-top:18px;background:none;border:1px solid var(--line);border-radius:99px;padding:6px 16px;font:inherit;font-size:13px;color:var(--sub);cursor:pointer}
+@media (prefers-reduced-motion:reduce){.dphoto,.arr,.dbar i,.dstat{transition:none}.run .dphoto::after{animation:none}}
+@media (max-width:560px){.dphoto{width:230px;height:176px}.a1,.a3{left:8px}.a2,.a4{right:8px}.dstage{height:200px}}
+
+.cta .btn{background:#fff;color:#1e50ff}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;text-align:center;padding:24px 16px 48px}
+  .feat-row{grid-template-columns:1fr;gap:48px}
+  .feat-item img{max-width:240px}
+  .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+<div class="sky">
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="../img/icon.png" alt="">Photo Compressor</a>
+    <nav class="nav"><a class="lang" href="../" hreflang="ko">한국어</a><a class="btn sm" href="https://play.google.com/store/apps/details?id=com.offsong.compress_image&hl=en">Install</a></nav>
+  </div>
+</header>
+  <section class="wrap hero">
+    <div>
+      <img class="icon" src="../img/icon.png" alt="">
+      <h1>Smaller files,<br><b>clear photos</b></h1>
+      <div class="meaning">Batch compress · Hit your target KB</div>
+      <p>For email, online forms, uploads or extra storage &mdash;<br>shrink your photos exactly as much as you need,<br>without complicated settings.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.compress_image&hl=en"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Zm11.3 11.3 2.6 2.6-11.7 6.7 9.1-9.3Zm0-2.2L5.8 1.6l11.7 6.7-2.6 2.6Zm3.9-1.6 2.8 1.6c.8.5.8 1.7 0 2.2l-2.8 1.6-2.8-2.7 2.8-2.7Z"/></svg> Get it on Google Play</a>
+    </div>
+    <div class="art2"><img src="../img/en/hero1.png" alt="Choosing photos to compress in a batch" width="720" height="1280"><img src="../img/en/hero2.png" alt="" width="720" height="1280"></div>
+  </section>
+</div>
+<main>
+  <section class="demo">
+    <h2>Watch it shrink</h2>
+    <div class="dcard" id="demo">
+      <div class="dstage">
+        <span class="arr a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l9 9M13 6v7H6"/></svg></span>
+        <span class="arr a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l9 9M13 6v7H6"/></svg></span>
+        <span class="arr a3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l9 9M13 6v7H6"/></svg></span>
+        <span class="arr a4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l9 9M13 6v7H6"/></svg></span>
+        <div class="dphoto" role="img" aria-label="IMG_0412.jpg" style="background-image:url(../img/demo.jpg)"></div>
+      </div>
+      <div class="dfile">IMG_0412.jpg · <span id="dstate">Before</span></div>
+      <div class="dsize"><b id="dnum">33.71</b><span id="dunit">MB</span></div>
+      <div class="dbar"><i id="dbar"></i></div>
+      <div class="drow"><span>Before 33.71 MB</span><span>After 2.29 MB</span></div>
+      <div class="dstat">Saved 31.42 MB <em>-93%</em></div><br>
+      <button class="dre" id="dre" type="button">Replay</button>
+    </div>
+  </section>
+<script>
+(function(){
+  var c=document.getElementById('demo'),n=document.getElementById('dnum'),bar=document.getElementById('dbar'),st=document.getElementById('dstate');
+  var S1="Compressing…",S2="Done",S0="Before",from=33.71,to=2.29,dur=1600,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,timer;
+  function reset(){c.classList.remove('run','done');n.textContent=from.toFixed(2);bar.style.width='100%';st.textContent=S0;}
+  function run(){
+    clearTimeout(timer);reset();
+    if(reduce){c.classList.add('run','done');n.textContent=to.toFixed(2);bar.style.width=(to/from*100)+'%';st.textContent=S2;return;}
+    timer=setTimeout(function(){
+      c.offsetWidth;c.classList.add('run');st.textContent=S1;bar.style.width=(to/from*100)+'%';
+      var t0=performance.now();
+      (function tick(t){var p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);n.textContent=(from-(from-to)*e).toFixed(2);if(p<1)requestAnimationFrame(tick);else{c.classList.add('done');st.textContent=S2;timer=setTimeout(run,3200);}})(t0);
+    },700);
+  }
+  document.getElementById('dre').onclick=run;
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){run();io.disconnect();}},{threshold:.4});io.observe(c);}else run();
+})();
+</script>
+  <section class="feat">
+    <div class="wrap feat-row">
+      <div class="feat-item"><div class="kicker">Set your target size</div><h2>Choose a size from 50 KB up<br>for the best quality possible.</h2><img src="../img/en/f1.png" alt="Choosing a maximum file size such as 100KB or 500KB" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><div class="kicker">Fine-tune your photos</div><h2>Adjust quality, size, format,<br>and metadata settings.</h2><img src="../img/en/f2.png" alt="Manual quality and resize sliders" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><div class="kicker">See your results</div><h2>Compare file sizes and<br>check your saved photos.</h2><img src="../img/en/f3.png" alt="5 photos compressed, 2.29MB down to 837KB" loading="lazy" width="720" height="1280"></div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="sec-title">Exactly <b>as small as you need</b></h2>
+      <div class="grid">
+        <article class="card"><h3>Batch compression</h3><p>Select multiple photos and compress them all at once.</p></article>
+        <article class="card"><h3>Reduce size fast</h3><p>Pick Low, Medium or High to balance quality and size instantly.</p></article>
+        <article class="card"><h3>Target file size</h3><p>Start from 50KB or enter your own &mdash; perfect for upload limits.</p></article>
+        <article class="card"><h3>Fine-tune</h3><p>Quality, width and height, resolution, output format and EXIF.</p></article>
+        <article class="card"><h3>Preview first</h3><p>Compare original and compressed sizes before you save.</p></article>
+        <article class="card"><h3>On-device and safe</h3><p>Photos never leave your device, and your originals stay untouched.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="sec whom" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="sec-title"><b>Use it</b> when you need to</h2>
+      <ul>
+        <li>Shrink photos for email attachments</li>
+        <li>Meet size limits on applications and forms</li>
+        <li>Compress many photos at once</li>
+        <li>Free up storage space</li>
+        <li>Upload photos faster to websites and messengers</li>
+      </ul>
+    </div>
+  </section>
+  <section class="cta" style="background:#1e50ff;color:#fff">
+    <h2>Many photos at once,<br>down to the size you need</h2>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.offsong.compress_image&hl=en">Get it on Google Play</a>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Compression and resizing happen on your device, and your original photos stay untouched.</p>
+    <p>Project J Lab · <a href="mailto:dhsthdwjd1@gmail.com">dhsthdwjd1@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>
