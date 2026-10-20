@@ -5,7 +5,7 @@
   <link>https://projectjlab.github.io/</link>
   <description>Project J Lab이 만든 Android 앱 소개</description>
   <language>ko</language>
-  <lastBuildDate>Sun, 18 Oct 2026 09:00:00 +0900</lastBuildDate>
+  <lastBuildDate>Tue, 20 Oct 2026 09:00:00 +0900</lastBuildDate>
   <atom:link href="https://projectjlab.github.io/rss.xml" rel="self" type="application/rss+xml"/>
   <item>
     <title>임대픽 - LH 임대·분양 맞춤 공고 알림 앱 | 행복주택·국민임대 공고</title>
@@ -125,6 +125,13 @@
     <guid isPermaLink="true">https://projectjlab.github.io/mosquito/</guid>
     <description>9~22kHz 범위에서 원하는 주파수의 순음을 골라 재생하는 모기 퇴치 주파수 사운드 앱. 캠핑·숲길·실내 등 상황별 프리셋, 시작·종료 시간 설정과 무제한 재생, 백그라운드 재생을 지원해요.</description>
     <pubDate>Sun, 18 Oct 2026 09:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>최애콘 - 최애 아이콘 꾸미기 앱 | 아이돌 앱 아이콘 바꾸기, 홈화면 테마</title>
+    <link>https://projectjlab.github.io/biasicon/</link>
+    <guid isPermaLink="true">https://projectjlab.github.io/biasicon/</guid>
+    <description>앱 아이콘을 좋아하는 아이돌 사진으로 바꿔 주는 아이콘 꾸미기 앱. 보이그룹·걸그룹 최애를 고르고 한번에 꾸미기, 아이콘 이름 변경, 알림 배지까지. 홈 화면을 최애로 가득 채워 보세요.</description>
+    <pubDate>Tue, 20 Oct 2026 09:00:00 +0900</pubDate>
   </item>
 </channel>
 </rss>
