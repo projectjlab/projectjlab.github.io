@@ -5,7 +5,7 @@
   <link>https://projectjlab.github.io/</link>
   <description>Project J Lab이 만든 Android 앱 소개</description>
   <language>ko</language>
-  <lastBuildDate>Tue, 20 Oct 2026 09:00:00 +0900</lastBuildDate>
+  <lastBuildDate>Wed, 21 Oct 2026 09:00:00 +0900</lastBuildDate>
   <atom:link href="https://projectjlab.github.io/rss.xml" rel="self" type="application/rss+xml"/>
   <item>
     <title>임대픽 - LH 임대·분양 맞춤 공고 알림 앱 | 행복주택·국민임대 공고</title>
@@ -132,6 +132,13 @@
     <guid isPermaLink="true">https://projectjlab.github.io/biasicon/</guid>
     <description>앱 아이콘을 좋아하는 아이돌 사진으로 바꿔 주는 아이콘 꾸미기 앱. 보이그룹·걸그룹 최애를 고르고 한번에 꾸미기, 아이콘 이름 변경, 알림 배지까지. 홈 화면을 최애로 가득 채워 보세요.</description>
     <pubDate>Tue, 20 Oct 2026 09:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>오늘의 발견 - 폰 내려놓기 관찰 빙고 앱 | 스마트폰 사용 줄이기, 마음챙김 산책</title>
+    <link>https://projectjlab.github.io/discovery/</link>
+    <guid isPermaLink="true">https://projectjlab.github.io/discovery/</guid>
+    <description>잠시 폰을 내려놓고 주변을 발견해 보세요. 매일 새로 열리는 3×3 관찰 빙고로 구름 모양, 새소리, 작은 꽃을 찾고, 빙고를 완성하면 손그림 동네 이웃을 만나요. 스마트폰 사용 줄이기를 가볍게 시작하세요.</description>
+    <pubDate>Wed, 21 Oct 2026 09:00:00 +0900</pubDate>
   </item>
 </channel>
 </rss>

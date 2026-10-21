@@ -22,47 +22,82 @@
 {"@context":"https://schema.org","@type":"MobileApplication","name":"Bias Icon - Kpop Icon Changer","operatingSystem":"Android","applicationCategory":"PersonalizationApplication","inLanguage":"en","description":"Turn your app icons into your bias. Kpop icon changer &amp; home screen themes.","image":"https://projectjlab.github.io/biasicon/img/icon.png","installUrl":"https://play.google.com/store/apps/details?id=com.offsong.wjsn_wallpaper&hl=en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Project J Lab"}}
 </script>
 <style>
-:root{--bg:#ffffff;--bg2:#ffffff;--card:#f4f5ff;--text:#14152b;--sub:#5e6178;--line:#e3e5f3;--moon:#5b64fb;--coral:#5b64fb;--grad:#5b64fb}
+:root{--bg:#ffffff;--card:#f4f5ff;--text:#14152b;--sub:#5e6178;--line:#e3e5f3;--accent:#5b64fb}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:Pretendard,-apple-system,sans-serif;line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-.sky{background:#5b64fb;color:#fff}.sky .nav .lang{color:#fff}.sky .hero p{color:rgba(255,255,255,.9)}.sky .meaning{color:#ffd84d!important}.sky .btn{background:#fff;color:#5b64fb}
+.sky{background:#5b64fb;color:#ffffff}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;font-size:18px}
 .brand img{width:32px;height:32px;border-radius:9px}
 .nav{display:flex;align-items:center;gap:14px;font-size:14px}
-.nav .lang{color:var(--sub);text-decoration:none}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:13px 24px;font-size:15px;font-family:Pretendard,sans-serif}
+.nav .lang{text-decoration:none;opacity:.75}
+.btn{display:inline-flex;align-items:center;gap:8px;background:#5b64fb;color:#ffffff;text-decoration:none;font-weight:700;border-radius:999px;padding:13px 24px;font-size:15px}
 .btn.sm{padding:8px 16px;font-size:14px}
+.sky .btn{background:#ffffff;color:#5b64fb}
 .hero{display:grid;grid-template-columns:1fr 1.15fr;gap:36px;align-items:center;padding:48px 20px 72px}
-.hero .icon{width:76px;height:76px;border-radius:20px;margin-bottom:22px;box-shadow:0 8px 28px rgba(20,20,80,.25)}
-.hero h1 b{color:#ffd84d}
+.hero .icon{width:76px;height:76px;border-radius:20px;margin-bottom:22px;box-shadow:0 8px 28px rgba(0,0,0,.12)}
 .hero h1{font-size:clamp(34px,5.5vw,52px);font-weight:800;line-height:1.3;letter-spacing:-.01em}
-.hero .meaning{font-size:13px;color:var(--moon);margin-top:8px;opacity:.85}
-.hero p{color:var(--sub);font-size:17px;margin:18px 0 28px}
+.hero h1 b{color:#ffd84d}
+.hero .meaning{font-size:13px;margin-top:8px;opacity:.8}
+.hero p{color:rgba(255,255,255,.9);font-size:17px;margin:18px 0 28px}
+.hero p.notice{font-size:12px;margin:12px 0 0;opacity:.7}
 .art2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.art2 img{width:100%;height:auto;border-radius:22px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
-.feat{background:#fff;color:#1d2433;padding:80px 0}
+.art2 img{width:100%;height:auto;border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.12);border:1px solid rgba(0,0,0,.05)}
+.feat{padding:80px 0}
 .feat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .feat-item{text-align:center}
 .feat-item .kicker{color:#5b64fb;font-size:15px;font-weight:800}
-.feat-item h2{font-size:18px;font-weight:700;line-height:1.6;margin:6px 0 20px;min-height:58px}
-.feat-item img{width:100%;max-width:280px;height:auto;border-radius:20px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
-.sec{padding:80px 0}
+.feat-item h2{font-size:18px;font-weight:700;line-height:1.6;margin:8px 0 20px;min-height:58px}
+.feat-item img{width:100%;max-width:300px;height:auto;border-radius:20px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.sec{padding:80px 0;background:var(--card)}
+.sec.plain{background:transparent}
 .sec-title{text-align:center;font-size:clamp(26px,4vw,34px);font-weight:800;line-height:1.4;margin-bottom:40px}
-.sec-title b{color:var(--moon)}
+.sec-title b{color:var(--accent)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
 .card h3{font-size:18px;font-weight:700;margin-bottom:8px}
-.card h3::before{content:"\2605";color:#ffc928;color:var(--moon);margin-right:8px}
+.card h3::before{content:"\2605";color:#ffc928;margin-right:8px}
 .card p{color:var(--sub);font-size:15px}
 .whom ul{list-style:none;max-width:600px;margin:0 auto;display:grid;gap:10px}
 .whom li{background:var(--card);border-radius:14px;padding:14px 20px}
-.whom li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--moon);margin-right:12px;vertical-align:middle}
+.whom li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:12px;vertical-align:middle}
 .cta{text-align:center;padding:90px 20px}
 .cta h2{font-size:clamp(28px,5vw,42px);font-weight:800;line-height:1.35;margin-bottom:28px}
-footer{border-top:1px solid var(--line);padding:28px 0 44px;font-size:12px;color:var(--sub);font-family:Pretendard,sans-serif}
+footer{border-top:1px solid var(--line);padding:28px 0 44px;font-size:12px;color:var(--sub)}
+footer p{margin:4px 0}
+.sky .meaning{color:#ffd84d;opacity:1}
+.try{padding:72px 0 24px;text-align:center}
+.try h2{font-size:clamp(26px,4vw,34px);font-weight:800;line-height:1.35}
+.try h2 b{color:#5b64fb}
+.try .hint{color:#5e6178;font-size:15px;margin:8px 0 28px}
+.demo{display:grid;grid-template-columns:minmax(260px,320px) minmax(260px,420px);gap:32px;justify-content:center;align-items:start;text-align:left}
+.phone{background:#111;border-radius:42px;padding:12px;box-shadow:0 20px 50px rgba(20,20,80,.25)}
+.screen{border-radius:32px;min-height:520px;padding:44px 18px 24px;background:linear-gradient(160deg,#2b2f6b 0%,#5b64fb 55%,#ff9ec4 100%);position:relative}
+.screen .clock{color:#fff;text-align:center;font-size:44px;font-weight:300;letter-spacing:-1px}
+.screen .date{color:rgba(255,255,255,.85);text-align:center;font-size:13px;margin-bottom:34px}
+.home{display:grid;grid-template-columns:repeat(4,1fr);gap:20px 10px}
+.app{display:flex;flex-direction:column;align-items:center;gap:6px;background:none;border:0;padding:0;cursor:pointer;font:inherit}
+.app .ic{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;background-size:cover;background-position:center;box-shadow:0 4px 12px rgba(0,0,0,.18);transition:transform .25s cubic-bezier(.2,1.4,.4,1)}
+.app .ic svg{width:28px;height:28px;fill:#fff}
+.app.photo .ic svg{display:none}
+.app.pop .ic{transform:scale(1.15)}
+.app .nm{color:#fff;font-size:11px;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,.4);max-width:66px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;outline:none;border-radius:4px}
+.app .nm[contenteditable="true"]{background:rgba(255,255,255,.25)}
+.picker h3{font-size:16px;font-weight:800;margin-bottom:10px}
+.photos{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.ph{aspect-ratio:1;border-radius:14px;border:3px solid transparent;background-size:cover;background-position:center;cursor:pointer;padding:0}
+.ph.sel{border-color:#5b64fb;box-shadow:0 0 0 3px #fff inset}
+.ph.up{background:#f4f5ff;border:2px dashed #b9bdf5;color:#5b64fb;font-size:12px;font-weight:700;display:grid;place-items:center;line-height:1.2}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tools button{border:1px solid #e3e5f3;background:#fff;border-radius:999px;padding:9px 16px;font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.tools button.main{background:#5b64fb;border-color:#5b64fb;color:#fff}
+.steps{margin-top:18px;color:#5e6178;font-size:14px;line-height:1.8}
+.steps b{color:#14152b}
+@media (max-width:760px){.demo{grid-template-columns:1fr;justify-items:center}.picker{width:100%;max-width:420px}}
+@media (prefers-reduced-motion:reduce){.app .ic{transition:none}}
+
 @media (max-width:760px){
   .hero{grid-template-columns:1fr;text-align:center;padding:24px 16px 48px}
   .feat-row{grid-template-columns:1fr;gap:48px}
@@ -91,11 +126,51 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;font-size:12px;color
   </section>
 </div>
 <main>
+  <section class="try">
+    <div class="wrap">
+      <h2>Try it <b>right now</b></h2>
+      <p class="hint">Pick a photo, then tap an icon. You can add your own photo too.</p>
+      <div class="demo">
+        <div class="phone"><div class="screen">
+          <div class="clock" id="clk">9:41</div><div class="date">Another day with my bias</div>
+          <div class="home" id="home"><button class="app" type="button" data-k="phone"><span class="ic" style="background-color:#34c759"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg></span><span class="nm">Phone</span></button><button class="app" type="button" data-k="msg"><span class="ic" style="background-color:#ffcc00"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2Z"/></svg></span><span class="nm">Messages</span></button><button class="app" type="button" data-k="cam"><span class="ic" style="background-color:#5c6670"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 7.2 6H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-3.2L15 4H9Zm3 4.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z"/></svg></span><span class="nm">Camera</span></button><button class="app" type="button" data-k="gal"><span class="ic" style="background-color:#ff6b8a"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm1 13h14l-4.5-6-3.5 4.5-2.5-3L5 17Z"/></svg></span><span class="nm">Gallery</span></button><button class="app" type="button" data-k="cal"><span class="ic" style="background-color:#ff3b30"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7Zm-2 8h14v10H5V10Z"/></svg></span><span class="nm">Calendar</span></button><button class="app" type="button" data-k="music"><span class="ic" style="background-color:#af52de"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18a3 3 0 1 1-2-2.8V5l12-2v11a3 3 0 1 1-2-2.8V6.3L9 7.6V18Z"/></svg></span><span class="nm">Music</span></button><button class="app" type="button" data-k="map"><span class="ic" style="background-color:#2d9cdb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 5.2-7 13-7 13S5 14.2 5 9a7 7 0 0 1 7-7Zm0 4.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span><span class="nm">Maps</span></button><button class="app" type="button" data-k="set"><span class="ic" style="background-color:#8e8e93"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m19.4 13 .1-1-.1-1 2.1-1.6-2-3.5-2.5 1a7.4 7.4 0 0 0-1.7-1L15 3h-4l-.4 2.6c-.6.3-1.2.6-1.7 1l-2.5-1-2 3.5L6.5 11l-.1 1 .1 1-2.1 1.6 2 3.5 2.5-1c.5.4 1.1.7 1.7 1L11 21h4l.4-2.6c.6-.3 1.2-.6 1.7-1l2.5 1 2-3.5-2.2-1.9ZM13 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z"/></svg></span><span class="nm">Settings</span></button></div>
+        </div></div>
+        <div class="picker">
+          <h3>Pick a photo</h3>
+          <div class="photos" id="photos"><button class="ph" type="button" style="background-image:url(../img/demo/p1.webp)" aria-label="Photo 1"></button><button class="ph" type="button" style="background-image:url(../img/demo/p2.webp)" aria-label="Photo 2"></button><button class="ph" type="button" style="background-image:url(../img/demo/p3.webp)" aria-label="Photo 3"></button><button class="ph" type="button" style="background-image:url(../img/demo/p4.webp)" aria-label="Photo 4"></button><button class="ph" type="button" style="background-image:url(../img/demo/p5.webp)" aria-label="Photo 5"></button><button class="ph" type="button" style="background-image:url(../img/demo/p6.webp)" aria-label="Photo 6"></button><button class="ph" type="button" style="background-image:url(../img/demo/p7.webp)" aria-label="Photo 7"></button><button class="ph" type="button" style="background-image:url(../img/demo/p8.webp)" aria-label="Photo 8"></button><button class="ph" type="button" style="background-image:url(../img/demo/p9.webp)" aria-label="Photo 9"></button><button class="ph" type="button" style="background-image:url(../img/demo/p10.webp)" aria-label="Photo 10"></button><label class="ph up">+<br>My photo<input type="file" accept="image/*" id="up" hidden></label></div>
+          <div class="tools">
+            <button type="button" class="main" id="shuffle">Shuffle all</button>
+            <button type="button" id="rename">Rename</button>
+            <button type="button" id="reset">Reset</button>
+          </div>
+          <p class="steps"><b>1.</b> Pick a photo on the right<br><b>2.</b> Tap any icon on the home screen to change it<br><b>3.</b> Tap Rename to edit icon names<br>* Your photo stays in this browser and is never uploaded.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<script>
+(function(){
+  var apps=[].slice.call(document.querySelectorAll('#home .app')),phs=[].slice.call(document.querySelectorAll('#photos .ph:not(.up)')),sel=null,editing=false;
+  var names=apps.map(function(a){return a.querySelector('.nm').textContent});
+  function pick(p){phs.forEach(function(x){x.classList.remove('sel')});p.classList.add('sel');sel=p.style.backgroundImage;}
+  function apply(a,bg){var ic=a.querySelector('.ic');ic.style.backgroundImage=bg;a.classList.add('photo','pop');setTimeout(function(){a.classList.remove('pop')},260);}
+  phs.forEach(function(p){p.addEventListener('click',function(){pick(p)})});
+  pick(phs[0]);
+  apps.forEach(function(a){a.addEventListener('click',function(){if(editing)return;if(sel)apply(a,sel);})});
+  document.getElementById('shuffle').onclick=function(){apps.forEach(function(a,i){setTimeout(function(){apply(a,phs[Math.floor(Math.random()*phs.length)].style.backgroundImage)},i*70)})};
+  document.getElementById('reset').onclick=function(){apps.forEach(function(a,i){var ic=a.querySelector('.ic');ic.style.backgroundImage='';a.classList.remove('photo');a.querySelector('.nm').textContent=names[i]})};
+  var rb=document.getElementById('rename');
+  rb.onclick=function(){editing=!editing;apps.forEach(function(a){var n=a.querySelector('.nm');n.contentEditable=editing;});rb.textContent=editing?'Done':'Rename';if(editing)apps[0].querySelector('.nm').focus();};
+  apps.forEach(function(a){a.querySelector('.nm').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();this.blur()}})});
+  document.getElementById('up').addEventListener('change',function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(){var b=document.createElement('button');b.type='button';b.className='ph';b.style.backgroundImage='url('+r.result+')';var up=document.querySelector('#photos .up');up.parentNode.insertBefore(b,up);phs.push(b);b.addEventListener('click',function(){pick(b)});pick(b);};r.readAsDataURL(f);});
+  var c=document.getElementById('clk');function tick(){var d=new Date();c.textContent=d.getHours()+':'+('0'+d.getMinutes()).slice(-2)}tick();setInterval(tick,30000);
+})();
+</script>
   <section class="feat">
     <div class="wrap feat-row">
-      <div class="feat-item"><div class="kicker">Pick your bias first</div><h2>Choose as many groups as you like.<br>We&rsquo;ll show their photos first.</h2><img src="../img/en/f1.webp" alt="Choosing boy groups and girl groups" loading="lazy" width="720" height="1280"></div>
-      <div class="feat-item"><div class="kicker">Decorate in one go</div><h2>Pick an app, tap a photo, done.<br>Or shuffle to fill them all at once.</h2><img src="../img/en/f2.webp" alt="Changing many app icons to idol photos at once" loading="lazy" width="720" height="1280"></div>
-      <div class="feat-item"><div class="kicker">Right on your home screen</div><h2>Your new icons land on your home screen.<br>Rename them however you like.</h2><img src="../img/en/f3.webp" alt="A real home screen decorated with idol icons" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><img src="../img/en/f1.webp" alt="Pick your bias first - Choosing boy groups and girl groups" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><img src="../img/en/f2.webp" alt="Decorate in one go - Changing many app icons to idol photos at once" loading="lazy" width="720" height="1280"></div>
+      <div class="feat-item"><img src="../img/en/f3.webp" alt="Right on your home screen - A real home screen decorated with idol icons" loading="lazy" width="720" height="1280"></div>
     </div>
   </section>
   <section class="sec">
@@ -110,7 +185,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;font-size:12px;color
       </div>
     </div>
   </section>
-  <section class="sec whom" style="padding-top:0">
+  <section class="sec plain whom">
     <div class="wrap">
       <h2 class="sec-title"><b>Made</b> for</h2>
       <ul>
